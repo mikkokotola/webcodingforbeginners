@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Web Coding for beginners: Population Graphs</title>
+        <meta charset='utf-8'/>
+        <link rel="stylesheet" type="text/css" href="./test_export_instructions_GitHub.html_files/github-markdown.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                if (document.querySelector("script[type=\"math/tex; mode=display\"]") !== null) {
+                    var mathjax = document.createElement("script");
+                    mathjax.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
+                    document.head.appendChild(mathjax);
+                }
+                if (document.getElementsByTagName("code").length !== 0) {
+                    var highlight = document.createElement("script");
+                    var highlightcss = document.createElement("link");
+                    highlight.src = "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js";
+                    highlightcss.rel = "stylesheet";
+                    highlightcss.href = "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/github.min.css";
+                    highlight.onload = function() {hljs.initHighlighting();};
+                    document.head.appendChild(highlight);
+                    document.head.appendChild(highlightcss);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <article class="markdown-body">
+            <h1 id="web-coding-for-beginners-population-graphs">Web Coding for beginners: Population Graphs</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You should have installed Visual Studio Code on your computer. If you have not installed it, please do so now at <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. Select the <em>Download for Windows</em> if you have a Windows computer. Or your own operating system. Install it with default setup. </p>
+<p>Visual Studio Code is a handy code editor. It&#39;s not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. </p>
+<h2 id="goal">Goal</h2>
+<p>In this workshop, we are building a web app that can <strong>visualize the population time series</strong> for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries&#39; population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners&#39; pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  </p>
+<p>So the beef of the app would be something like this graph (which shows the population graph of Nigeria):</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\samplegraph.png" alt="Population graph for Nigeria"></p>
+<p>We could at this point sketch a simple description of what the app should do:
+1) User selects a country
+2) User sees the population graph for that country</p>
+<p>Simple. Let&#39;s try to keep it that way.</p>
+<h2 id="tools">Tools</h2>
+<p>So how are we going to build the web app? What will we need? Take a moment to name some of the technologies and things you can recall from the pre-work Mozilla tutorials - or just venture a good guess - before moving on. </p>
+<p>Guessed something? Good. Most likely you remembered some of the following:</p>
+<ul>
+<li><strong>HTML</strong> (Hypertext Markup Language) for creating the structure of the user interface (UI, the page the user sees and can interact with) </li><li><strong>CSS</strong> (Cascading Style Sheets) for defining the style, visual look of the page</li><li><strong>Javascript</strong>, a programming language, for creating the interactivity and logic for the app </li></ul>
+<p>Essential tools! With those one can do great things! But there is one - maybe the most essential component - that was not on that list. We can&#39;t just randomly generate some numbers to show as the population of Sweden. Our app is worthless if we do not have the <strong>data</strong> to display.</p>
+<p>Enter <strong>World Bank</strong>. Our friends in Washington D.C. provide loans and grants to the governments of poorer countries to make possible and speed up the development of those countries. But they also provide data. Lots of data. And a lot of that data is <strong>open data</strong>, meaning it&#39;s provided free of charge to anyone wanting to use it. Wait a minute: would they happen to have population data on countries all around the world? You guessed it. They do! But as we are coders building an automatic app, it is not enough that the data is open. It also has to be machine-readable. That means a format where we can easily access it and use it for our app. Fortunately it is. Next, let&#39;s take a look at what it looks like.  </p>
+<h2 id="data">Data</h2>
+<p>World Bank offers the population data through an <strong>API</strong>, an application programming interface. In English, an API means that we can send a message to the World Bank computer system saying <em>Give me the population time series of Finland</em> and the system sends it back to us in a reply message. So it&#39;s like a defined way of talking to the World Bank system.</p>
+<p>So how do we actually talk to the World Bank API? Well to get the population time series of Finland, we send a GET request to the address <a href="https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json">https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json</a>. Whoa, that looks ugly and complicated! But hey, let&#39;s try it. So, open your browser (e.g. Google Chrome) and copy that address to the address input field and hit enter. Yes, do it now.</p>
+<p>You should see a screen like this:</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\api_finland.png" alt="World Bank JSON data"></p>
+<p>It looks... well... it looks like a lot of data. But let&#39;s take a closer look. We&#39;ve circled a couple of points of interest in the picture. First, the data says <em>Finland</em>, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there&#39;s a list of what looks like year numbers running down the page. And third, next to the year numbers, there&#39;s values. For the circled year (2018), the value is 5518050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called <strong>JSON</strong> (JavaScript Object Notation). We&#39;ll take a bit closer look at it later.</p>
+<p>Take a look and see if you can find what is the earliest year in the time series.</p>
+<p>Now of course the API does not offer data on only Finland and only the total population.
+If you&#39;re feeling curious, you can see what happens if you exchange the FIN part in the address to ITA? What about if you change the part SP.POP.TOTL to SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN? There seems to be a lot of data at our fingertips!</p>
+<h2 id="basic-view-with-titles">Basic view with titles</h2>
+<p>OK, so we know that we have access to the data we need for our app. Let&#39;s get started with building it. </p>
+<p>We&#39;ll start with a minimal HTML file. Download the file at <a href="https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html">https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html</a></p>
+<p>If you open the file in Chrome, it will most likely open in your browser as a page. You can save the file to your own computer by pressing <code>Ctrl + S</code>. Create a folder in a suitable location on your computer. Name your folder e.g. <em>PopulationGraphs</em> and save the file <em>index.html</em> inside that folder.</p>
+<p>Now open the file in Visual Studio Code. You can do this by going to the file folder in Resource manager, right-clicking on the file and selecting <em>Open with Code</em>.</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\open_with_vscode.png" alt="Open with code in resource manager"></p>
+<p>You should see a screen something like this:</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\starthtml.png" alt="Minimal HTML file in Visual Studio Code"></p>
+<p>Great! Now also try opening the file with your browser by double-clicking on it in Resource manager. You should see something like this:</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\startview.png" alt="Initial html document"></p>
+<p>It&#39;s pretty much a blank screen! But do notice the title of the page (<em>Title here</em>). And the fact that you were able to open the page with your browser. A browser is the main way to view web pages, so this was an important test: you have just verified that you are able to view the first version of your app as a user! OK, it does not do anything yet, but it works! </p>
+<p>Now, modify the <em>index.html</em> file in Visual Studio Code in the following ways (and save the file after the modifications):</p>
+<ul>
+<li>Change the title to <em>Population graph app</em></li><li>Add an heading (&lt;h1&gt; element) inside the body of the document that says <em>Population graphs</em></li></ul>
+<p>H1 heading... I know what it it, but how exactly was it written as code?, you may ask. A very good question! We will now share a secret with you. <em>You don&#39;t need to remember!</em> In fact <em>no coder remembers the exact way to write all code expressions</em>. Not after 1 year, and not after 10 years of professional coding experience. But it has to be written correctly (in professional speak the <em>syntax</em> needs to be correct) for the code to work. So what to do?</p>
+<p>Well google it! Open Google and type in <em>H1 heading example</em>. Pick e.g. the result near the top that is from w3schools.com. And there you have it: an example of how to write an h1 heading in HTML.</p>
+<p>This might be the most important thing you learn in this workshop. You do not have to remember the exact syntax for code. Of course you will learn and be able to write common things by heart, but if you don&#39;t remember, it&#39;s no problem. Just google it. Everyone does. (And quite soon you will find <em>Stack overflow</em>, a site specializing in sharing discussions around problems coders face - and solutions to them.)</p>
+<p>So, you managed to change the title and add a heading. Now reload the file in your browser to verify that your changes are working. This is also important. Do code changes in small steps. Check after the changes that the changes work by reloading the document in your browser.</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\titles.png" alt="Titles inserted"></p>
+<h2 id="our-aim-walking-skeleton-mvp">Our aim: Walking skeleton, MVP</h2>
+<p>Our aim will be to get a minimal working version of the application as soon as possible. This is almost always the preferred approach to building an application. A minimal version that has all the needed parts is sometimes called the <strong>Walking skeleton</strong>. It has all the body parts but not much flesh around the bones. The reason for this approach is that it&#39;s easier to get the different part to work together if it&#39;s done early on. Once we have all the needed parts and we know they work together, it&#39;s much less risky to add functionality and make the different parts prettier.</p>
+<p>Our walking skeleton will have</p>
+<ul>
+<li>Possibility for the user to input a country</li><li>Fetching the population time series for that country</li><li>Showing the population graph</li></ul>
+<p>It will not be pretty, but that&#39;s not important at the walking skeleton phase.</p>
+<p>Once our skeleton walks, we will make it prettier. At that point we will pretty much have a <strong>MVP</strong>, a <em>Minimum Viable Product</em>. An MVP is something that we could - and should - give to actual users to try out. It will not be perfect, but giving it to users to try out will give us information about if it does what the user needs it to do. And also about what they would like it to do and how we could improve it.</p>
+<h2 id="reading-input-from-the-user">Reading input from the user</h2>
+<p>So far we don&#39;t have any of the three parts of the walking skeleton. Let&#39;s get the first one done. Let&#39;s get input from the user on what country she wants to view a population graph for.</p>
+<p>We will start simple. We&#39;ve seen that we can fetch data based on a three-letter country code (like FIN). That&#39;s good enough. Let&#39;s offer the user a text field to type in a three letter country code.</p>
+<p>Add the following HTML line under the &lt;h1&gt; element in your index.html file:</p>
+<pre><code>    &lt;input class=&#39;textinput&#39; placeholder=&#39;Whoa!&#39; type=&#39;text&#39; id=&#39;country&#39; maxlength=&#39;5&#39;/&gt;
+</code></pre><p>Save the file and reload the page in your browser. Try inputting text into the field.</p>
+<p>Let&#39;s look at the line we just inserted. It it an <em>input</em> element, which is used for getting user input. The input element has many <em>attributes</em>. It has <em>class</em>, which we will use later for making it prettier and an <em>id</em>, a unique identifier for this element which we will use in a moment. The class and id is not doing anything yet. But the <em>placeholder</em> is. And it&#39;s value is a bit funny. Change the value of the placeholder to <code>Country</code> and reload the page in your browser. The type <em>text</em> defines that we want text input and the <em>maxlength</em> limits the amount of characters the user can input. The current value is bit off. Fix it so that the user can only enter 3 characters. </p>
+<p>Nice. Let&#39;s also add an instruction text line so that the user can check what the 3-letter codes are if she can&#39;t guess it by heart. So add this line before the input element:</p>
+<pre><code>    &lt;p&gt;Enter three letter &lt;a href=&#39;https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes&#39; 
+        target=&#39;_blank&#39;&gt;country code&lt;/a&gt;&lt;/p&gt;
+</code></pre><p>It&#39;s a paragraph (a &lt;p&gt; element) with some text and a link. The <code>target=&#39;_blank&#39;</code> makes the browser open the linked page in a new tab instead of the current tab when the user clicks it.</p>
+<p>Save the file and reload the page in your browser if you haven&#39;t already. From now on we will not say this every time after code changes, but you should <em>always</em> do it after changes to the code. This way you can see right away if your change does not work and fix it right away.</p>
+<p>So the user is inputting three letter codes, but nothing is happening. Let&#39;s add a button below the input field that the user can press:</p>
+<pre><code>    &lt;p&gt;
+        &lt;button class=&#39;button&#39; id=&#39;renderBtn&#39;&gt;Render population graph&lt;/button&gt;
+    &lt;/p&gt;
+</code></pre><p>Notice that the button also has the <em>class</em> and <em>id</em> attributes.</p>
+<p>OK, the button is there and can be pressed, but nothing is still happening. The button does not have any default functionality. We have to create it ourselves using Javascript.</p>
+<h2 id="first-script-log-it-baby">First script: log it, baby!</h2>
+<p>We will make something happen when the button is pressed by adding some <em>script</em> to the document. Let&#39;s add the code first, and then try it and analyze it piece by piece.</p>
+<p>Add the following code just before the &lt;/body&gt; tag (at the end of the body of the document):</p>
+<pre><code>    &lt;script&gt;
+        // Define a function called logCountryCode. This function takes no arguments 
+        // (the brackets after the function name are empty). When the function is called, 
+        // the two indented lines of code are executed.
+        function logCountryCode () {
+            // Define a variable called countryCode. Put into it the value that is in the 
+            //HTML element with id &#39;country&#39;.
+            var countryCode = document.getElementById(&#39;country&#39;).value;
+            // Print the value of the variable countryCode into the console.
+            console.log(countryCode);
+        }
+
+        // Add an event listener to the HTML element with the id &#39;renderBtn&#39;. That&#39;s our 
+        // button. When the event &#39;click&#39; happens (when the button is clicked), run the 
+        // function &#39;logCountryCode&#39;.
+        document.getElementById(&#39;renderBtn&#39;).addEventListener(&#39;click&#39;, logCountryCode);
+    &lt;/script&gt;
+</code></pre><p>Notice how much easier it it to look at in Visual Studio Code with the colours indicating different types of elements. Now try out our updated app in your browser.</p>
+<p>Eeeh. There&#39;s still nothing happening when you press the button. Or is there?</p>
+<p>In your browser, hit <code>Ctrl + Shift + I</code>. You should see the <em>developer tools</em> opening up in your browser. Find the tab <em>Console</em> and click it. Now try entering some 3-letter codes and pressing the button. You should see the text you entered appearing in the console window immediately as you push the button. So it seems the code is writing the country codes to the console.</p>
+<p><img src="test_export_instructions_GitHub.html_files\images\console.png" alt="Logging data to console"></p>
+<p>Now that you opened the console, try it out a bit more. Type or copy-paste <code>console.log(&#39;Hi there!&#39;)</code> in the console and hit enter. Try also <code>1+8</code>. And  <code>var result = 1+8</code> and then <code>result</code>.</p>
+<p>So when you type in Javascript code to the console, the console will execute it. Now type some country code into the input field and run <code>logCountryCode ()</code> in the console. You should see the text you had in the input field printed in the console. You have just <em>called</em> the function logCountryCode from the console. So the console executed the two lines of code inside that function. A <strong>function</strong> is a piece of code that can be reused by calling it several times. You can give a function some input parameters (our function does not have any, the brackets in the function definition are empty). And it always returns some value to the caller. You actually already saw in your console what our function returns: <code>undefined</code>. That&#39;s Javascript and means &#39;nothing&#39;. Our function returns nothing. It currently does the logging and does not need to return any value to the caller.</p>
+<p>So what is each line in our code doing? Try reading the code now if you have not yet done so, and see if you understand some of the lines.</p>
+<p>You will notice that the code has comment lines, which start with <code>//</code>. Those lines are just comments (they are not really part of the code). They are meant for humans reading the code to clarify what the code is doing.</p>
+<p>The comments pretty much translate to English what the code is saying in Javascript. First define a function (a reusable chunk of code) that gets the text that is currently in the input field and prints it in the console. Then attach an event listener to the button and tell the button to call the function when it is clicked.</p>
+<p>Now this might have sounded quite complicated to you. No worries. This was a huge leap forward and introduced several very big programming concepts: <em>variables</em>, <em>functions</em>, <em>events</em> and <em>callback functions</em> (that&#39;s what it&#39;s called when you assign the function to the event listener: when the &#39;click&#39; event occurs, call this function). You don&#39;t have to understand every bit of the code fully yet. Focus on grasping on a higher level what each part does.</p>
+<p>But hey: We were able to read in input from the user and use it (print it in the console). The first of the three parts of the walking skeleton ready! Good stuff!</p>
+<h2 id="keep-it-clean-script-to-a-separate-file">Keep it clean: script to a separate file</h2>
+<p>We have written script directly into the HTML file. That works and is fine if you are doing something very small. But best practice is to have the scripts in a separate file. That way they are cleaner to read and edit and easier to reuse. So let&#39;s create a separate file and move our current scripts there.</p>
+<p>Create a new file in Visual Studio Code by clicking <em>File</em>-&gt;<em>New File</em> at the top left corner. This creates a new file and opens it. Now click <em>File</em>-&gt;<em>Save As</em>. Then, in the dialog, click the <em>Save as type</em> and select <em>JavaScript(${html`</em>`}.js...)<em>. Then modify the file name to be </em>myChart.js<em> and click </em>Save*.</p>
+<p>Now copy everything <em>between</em> the <em>&lt;script&gt;</em> and the &lt;/script&gt; tags (but not the script tags) in the <em>index.html</em> to the new <em>myChart.js</em> and save that file.</p>
+<p>Then delete the whole script block within <em>index.html</em>. And insert the following line at the end of the <em>head</em> of your <em>index.html</em>:</p>
+<pre><code>    &lt;script defer src=&#39;./myChart.js&#39;&gt;&lt;/script&gt;
+</code></pre><p>Now try the app in your browser and check that the country codes are still logged to the console when you click the button. If they are, your change works! If not, you can compare your current files to the ones here:</p>
+<ul>
+<li><a href="https://github.com/mikkokotola/populationgraphs/blob/994708304bc15f8cdb31bf0d16ee7eef701ce127/public/index.html">index.html</a></li><li><a href="https://github.com/mikkokotola/populationgraphs/blob/994708304bc15f8cdb31bf0d16ee7eef701ce127/public/myChart.js">myChart.js</a></li></ul>
+<p>So what did we just do? It&#39;s called <strong>refactoring</strong>. We changed the structure of the code without changing how the code works. We moved the Javascript code from within the <em>&lt;/script&gt;</em> tag</p>
+<h2 id="fetching-data">Fetching data</h2>
+<p>Let&#39;s move to the second part of the walking skeleton: fetching the population time series for a country.</p>
+<p>We already kn</p>
+<h2 id="technical">Technical</h2>
+<p>Author: Mikko Kotola 2020<br>License: MIT
+Made using markdown and Abricotine editor<br>World Bank data license: CC-BY-4.0</p>
+
+        </article>
+    </body>
+</html>
