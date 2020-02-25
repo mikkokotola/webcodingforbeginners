@@ -55,7 +55,7 @@ So how do we actually talk to the World Bank API? Well to get the population tim
 
 You should see a screen like this:
 
-![World Bank JSON data](.\pics\api_finland.png)
+![World Bank JSON data](./pics/api_finland.png)
 
 It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5518050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation). We'll take a bit closer look at it later.
 
@@ -73,15 +73,15 @@ If you open the file in Chrome, it will most likely open in your browser as a pa
 
 Now open the file in Visual Studio Code. You can do this by going to the file folder in Resource manager, right-clicking on the file and selecting *Open with Code*.
 
-![Open with code in resource manager](.\pics\open_with_vscode.png)
+![Open with code in resource manager](./pics/open_with_vscode.png)
 
 You should see a screen something like this:
 
-![Minimal HTML file in Visual Studio Code](.\pics\starthtml.png)
+![Minimal HTML file in Visual Studio Code](./pics/starthtml.png)
 
 Great! Now also try opening the file with your browser by double-clicking on it in Resource manager. You should see something like this:
 
-![Initial html document](.\pics\startview.png)
+![Initial html document](./pics/startview.png)
 
 It's pretty much a blank screen! But do notice the title of the page (*Title here*). And the fact that you were able to open the page with your browser. A browser is the main way to view web pages, so this was an important test: you have just verified that you are able to view the first version of your app as a user! OK, it does not do anything yet, but it works! 
 
@@ -98,7 +98,7 @@ This might be the most important thing you learn in this workshop. You do not ha
 
 So, you managed to change the title and add a heading. Now reload the file in your browser to verify that your changes are working. This is also important. Do code changes in small steps. Check after the changes that the changes work by reloading the document in your browser.
 
-![Titles inserted](.\pics\titles.png)
+![Titles inserted](./pics/titles.png)
 
 ## Our aim: Walking skeleton, MVP
 Our aim will be to get a minimal working version of the application as soon as possible. This is almost always the preferred approach to building an application. A minimal version that has all the needed parts is sometimes called the **Walking skeleton**. It has all the body parts but not much flesh around the bones. The reason for this approach is that it's easier to get the different part to work together if it's done early on. Once we have all the needed parts and we know they work together, it's much less risky to add functionality and make the different parts prettier.
@@ -181,7 +181,7 @@ Eeeh. There's still nothing happening when you press the button. Or is there?
 
 In your browser, hit `Ctrl + Shift + I`. You should see the *developer tools* opening up in your browser. Find the tab *Console* and click it. Now try entering some 3-letter codes and pressing the button. You should see the text you entered appearing in the console window immediately as you push the button. So it seems the code is writing the country codes to the console.
 
-![Logging data to console](.\pics\console.png)
+![Logging data to console](./pics/console.png)
 
 Now that you opened the console, try it out a bit more. Type or copy-paste `console.log('Hi there!')` in the console and hit enter. Try also `1+8`. And  `var result = 1+8` and then `result`.
 
@@ -251,11 +251,11 @@ Try it out by entering *FIN* and pressing the button.
 
 You should something new in you console. The first line is understandable. It says 'Fetching data from ' and then shows the same URL we've already seen. But the second line looks a bit more weird.
 
-![Array in console](.\pics\console_array.png)
+![Array in console](./pics/console_array.png)
 
 At least it says Array(50). And there's a small black triangle on the left side of it. Click the triangle. And click the triangles next to the 0 and 1 that appeared. And then again the 0 and 1 under the higher-level 1. You should see a view like this:
 
-![Data for Finland in console](.\pics\console_countrydata.png)
+![Data for Finland in console](./pics/console_countrydata.png)
 
 Hah! It appears we have the same data here that we looked at before. The first part (upper-level 0) is **metadata**, data describing the actual data that we requested. It tells us how many pages there are, how many data items are on a page, how many there are in total and when the data was last updated. The second part (upper-level 1) is the population time series. It is an **array**, which basically means a list of several items. The current array that we have appears to have 50 items in it. The first data item (the 0 under the upper-level 1) has the population count for the year 2019. Wait a minute, no it doesn't. The value says *null*. Looks like World Bank hasn't got the figures for last year yet. The next item, year 2018, looks better. Finland's population was 5 518 050 in the year 2018. And the following items look good.
 
@@ -358,7 +358,7 @@ Time to try it out in the browser!
 
 Woohoo! We have liftoff! With the country code FIN, it should look like this:
 
-![First population graph, Finland](.\pics\first_graph.png)
+![First population graph, Finland](./pics/first_graph.png)
 
 **The skeleton is walking!** Try with some different country codes. Celebrate! Have a cup of coffee, you've earned it! 
 

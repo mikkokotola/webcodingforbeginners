@@ -1,7 +1,3 @@
-# Ignore application data and local docs
-data/
-localdocs/
-
 # Google cloud deployment files
 .gcloudignore
 app.yaml
