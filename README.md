@@ -475,6 +475,6 @@ If you are still eager to learn more and improve you app (outside the workshop),
 
 ## Technical
 Author: Mikko Kotola 2020  
-License: MIT
+License: MIT  
 Made using markdown and Abricotine editor  
 World Bank data license: CC-BY-4.0
