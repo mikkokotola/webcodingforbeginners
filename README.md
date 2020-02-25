@@ -1,4 +1,4 @@
-# Web Coding for beginners: Population Graphs
+# Web Coding for Beginners: Population Graphs
 
 Welcome to the amazing world of web coding! In this workshop we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the workshop first.
 
