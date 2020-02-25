@@ -1,4 +1,4 @@
-#Web Coding for beginners: Population Graphs
+# Web Coding for beginners: Population Graphs
 
 Welcome to the amazing world of web coding! In this workshop we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the workshop first.
 
@@ -24,7 +24,7 @@ In this workshop, we are building a web app that can **visualize the population 
 
 So the beef of the app would be something like this graph (which shows the population graph of Nigeria):
 
-![Population graph for Nigeria](.\pics\samplegraph.png)
+![Population graph for Nigeria](./pics/samplegraph.png)
 
 We could at this point sketch a simple description of what the app should do:
 1) User selects a country
