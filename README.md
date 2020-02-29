@@ -130,11 +130,10 @@ Let's look at the line we just inserted. It it an *input* element, which is used
 
 Nice. Let's also add an instruction text line so that the user can check what the 3-letter codes are if she can't guess it by heart. So add this line before the input element:
 ```
-    <p>Enter three letter <a href='https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes' 
-        target='_blank'>country code</a></p>
+    <p>Enter three letter country code</p>
 ```
 
-It's a paragraph (a &lt;p> element) with some text and a link. The `target='_blank'` makes the browser open the linked page in a new tab instead of the current tab when the user clicks it.
+It's a paragraph (a &lt;p> element) with some text. But it would be nice to offer the user a link to check the three-letter codes (they are not all obvious). Add a link (an HTML &lt;a> &lt;/a> element) around the text 'country code' that takes the user to the page https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes. Maybe it's also nice that the linked page opens in a new tab, so use the attribute `target='_blank'`, which makes the browser open the linked page in a new tab instead of the current tab.
 
 Save the file and reload the page in your browser if you haven't already. From now on we will not say this every time after code changes, but you should *always* do it after changes to the code. This way you can see right away if your change does not work and fix it right away.
 
@@ -175,7 +174,9 @@ Add the following code just before the &lt;/body> tag (at the end of the body of
     </script>
 ```
 
-Notice how much easier it it to look at in Visual Studio Code with the colours indicating different types of elements. Now try out our updated app in your browser.
+Notice how much easier it it to look at in Visual Studio Code with the colours indicating different types of elements. One pro tip for Visual Studio Code is also the key combination `Shift + Alt + F`, which formats the current document according to its type. So it format HTML like HTML should be indented and Javascript like Javascript should be, making it easy to read and saving you from manually having to fix indentations, linings and extra spaces in the code. Try putting some extra spaces in your code and then hitting `Shift + Alt + F`.
+
+Now try out our updated app in your browser.
 
 Eeeh. There's still nothing happening when you press the button. Or is there?
 
@@ -300,7 +301,7 @@ Second, we need to add an HTML element where we can render the population graph.
     <canvas id='myChart'></canvas>
 ```
 
-Let's move to the file *myChart.js*. Add the following two helper functions to the end of the file:
+Let's move to the file *myChart.js*. Add the following three helper functions to the end of the file:
 ```
 function getValues(data) {
     var vals = data[1].sort((a, b) => a.date - b.date).map(item => item.value);
@@ -311,13 +312,18 @@ function getLabels(data) {
     var labels = data[1].sort((a, b) => a.date - b.date).map(item => item.date);
     return labels;
 }
+
+function getCountryName(data) {
+    var countryName = data[1][0].country.value;
+    return countryName;
+}
 ```
 
-These helper functions will extract the actual population counts and the year labels from the data array that we got from the World Bank (and that we printed in the console). Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet.
+These helper functions will extract the actual population counts, the year labels and the country name from the data array that we got from the World Bank (and that we printed in the console). Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet.
 
-Then we'll see how our new tool works. Let's add this function that will render the actual population graph using the population data and the year labels:
+Then we'll see how our new tool works. Let's add this function that will render the actual population graph using the population data, the year labels and the country name:
 ```
-function renderChart(data, labels) {
+function renderChart(data, labels, countryName) {
     var ctx = document.getElementById('myChart').getContext('2d');
     
     // Draw new chart
@@ -326,7 +332,7 @@ function renderChart(data, labels) {
         data: {
             labels: labels,
             datasets: [{
-                label: 'Population',
+                label: 'Population, ' + countryName,
                 data: data,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -340,7 +346,7 @@ The first row looks quite similar to what we've already seen. It finds an HTML e
 
 The rest of the code consists of a call `new Chart(ctx, {...})`. This is where we are telling the Chart.js tool 'Draw a new Chart ON this 2-d whiteboard (*ctx*) using this data and these labels'. The `type: 'line'` sets the type of chart as a line chart. The *label* defines a label for the line. The `borderColor: 'rgba(75, 192, 192, 1)'` defines what colour we want the line to be. It is defined using values for red, green, blue and alpha (for transparency). The *backgroundColor* does the same for the fill colour of the chart.
 
-We've got all the pieces now. Let's put them together by modifying the if-block within the fetchData() function. Add the three lines below at the end of the if-block. The whole if-block will then look like this:
+We've got all the pieces now. Let's put them together by modifying the if-block within the fetchData() function. Add the four lines below at the end of the if-block. The whole if-block will then look like this:
 ```
  	if (response.status == 200) {
         var fetchedData = await response.json();
@@ -348,7 +354,8 @@ We've got all the pieces now. Let's put them together by modifying the if-block 
 
         var data = getValues(fetchedData);
         var labels = getLabels(fetchedData);
-        renderChart(data, labels);
+        var countryName = getCountryName(fetchedData);
+		renderChart(data, labels, countryName);
     }
 ```
 
@@ -395,7 +402,7 @@ There is (sort of) also another problem. Even though the population graph looks 
         data: {
             labels: labels,
             datasets: [{
-                label: 'Population',
+                label: 'Population, ' + countryName,
                 data: data,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -458,7 +465,7 @@ We would love to get some feedback from you. Regardless of whether you have work
 Give feedback at (link to be added). 
 
 ## Extra assignments
-If you are still eager to learn more and improve you app (outside the workshop), here are some assignments to improve the app or and code.
+If you are still eager to learn more and improve you app, here are some assignments to improve the app.
 
 ### Small assignments
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
@@ -467,11 +474,12 @@ If you are still eager to learn more and improve you app (outside the workshop),
 - **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. 
 
 ### Medium-size assignments
-- Fetch information about the capital city and area of the country + the country flag image from [RESTCountries API](https://restcountries.eu/#api-endpoints-code) and display those along with the population graph. You will need to create new HTML elements and make a similar API request to RestCountries as you did to the World Bank API. For a point of comparison, you can look at the master branch of the [Population graphs repository](https://github.com/mikkokotola/populationgraphs).
-- Our app does not really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.fg. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
+- **Show country name and indicator name.** Our app is currently showing the country name only as a label within the graph. Add separate text paragraphs that display the country name and the indicator name. We are already extracting the country name from the fetchedData in the function getCountryName(data). Use that as an example and figure out how to extract the indicator name in a similar function getIndicatorName(data).
+- **Fetch information about the capital city and area of the country, and the image of the country flag** from [RESTCountries API](https://restcountries.eu/#api-endpoints-code) and display those along with the population graph. You will need to create new HTML elements and make a similar API request to RestCountries as you did to the World Bank API. For a point of comparison, you can look at the master branch of the [Population graphs repository](https://github.com/mikkokotola/populationgraphs).
+- **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
 
 ### Large assignments
-- Implement way for the user to select the country using a drop-down menu instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
+- Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
 ## Technical
