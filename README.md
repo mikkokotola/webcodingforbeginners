@@ -1,6 +1,6 @@
 # Web Coding for Beginners: Population Graphs
 
-Welcome to the amazing world of web coding! In this workshop we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the workshop first.
+Welcome to the amazing world of web coding! In this short course we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the workshop first.
 
 ## Prerequisites
 You should have installed Visual Studio Code on your computer. If you have not installed it, please do so now at https://code.visualstudio.com/. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
@@ -8,19 +8,18 @@ You should have installed Visual Studio Code on your computer. If you have not i
 Visual Studio Code is a handy code editor. It's not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. 
 
 ## Pre-work
-You should have completed the pre-work for this workshop:
-*Read and do the simple exercises in the following materials before the workshop. All materials are by Mozilla. Total time required ~3-5 hours.* 
+Read and do the simple exercises in the following materials before continuing with this course. The pre-work will give you the basic understanding you will need for building the app on this course. All pre-work materials are by Mozilla. Total time required for the pre-work is ~3-5 hours. 
 - [Getting started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [What is CSS?](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
 - [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 
-## Time requirement for the workshop
-Our initial estimate is that it it possible to build the population graphs app in one working day (8 hours). This assumes no previous programming experience, but does assume that the person starting this workshop has completed the pre-work defined above and is comfortable using a computer and a browser.
+## Time requirement for the course
+Our initial estimate is that it it possible to build the population graphs app in one working day (8 hours). This assumes no previous programming experience, but does assume that the person starting this course has completed the pre-work defined above and is comfortable using a computer and a browser.
 
 ## Goal
-In this workshop, we are building a web app that can **visualize the population time series** for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries' population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners' pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  
+In this short course, we are building a web app that can **visualize the population time series** for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries' population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners' pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  
 
 So the beef of the app would be something like this graph (which shows the population graph of Nigeria):
 
@@ -462,7 +461,7 @@ So hopefully you have enjoyed the journey and have some new skills and insights 
 ## Feedback
 We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
-Give feedback at (link to be added). 
+Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 2 minutes. 
 
 ## Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app.
