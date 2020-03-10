@@ -1,9 +1,9 @@
 # Web Coding for Beginners: Population Graphs
 
-Welcome to the amazing world of web coding! In this short course we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the workshop first.
+Welcome to the amazing world of web coding! In this short course we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
 ## Prerequisites
-You should have installed Visual Studio Code on your computer. If you have not installed it, please do so now at https://code.visualstudio.com/. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
+You will need to have Visual Studio Code installed on your computer. If you have not installed it, please do so now at https://code.visualstudio.com/. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
 
 Visual Studio Code is a handy code editor. It's not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. 
 
@@ -93,7 +93,7 @@ H1 heading... I know what it it, but how exactly was it written as code?, you ma
 
 Well google it! Open Google and type in *H1 heading example*. Pick e.g. the result near the top that is from w3schools.com. And there you have it: an example of how to write an h1 heading in HTML.
 
-This might be the most important thing you learn in this workshop. You do not have to remember the exact syntax for code. Of course you will learn and be able to write common things by heart, but if you don't remember, it's no problem. Just google it. Everyone does. (And quite soon you will find *Stack overflow*, a site specializing in sharing discussions around problems coders face - and solutions to them.)
+This might be the most important thing you learn during this course. You do not have to remember the exact syntax for code. Of course you will learn and be able to write common things by heart, but if you don't remember, it's no problem. Just google it. Everyone does. (And quite soon you will find *Stack overflow*, a site specializing in sharing discussions around problems coders face - and solutions to them.)
 
 So, you managed to change the title and add a heading. Now reload the file in your browser to verify that your changes are working. This is also important. Do code changes in small steps. Check after the changes that the changes work by reloading the document in your browser.
 
@@ -224,7 +224,7 @@ Great, now we can write new scripts in the file *myChart.js* and they will alway
 ## Fetching data
 Let's move to the second part of the walking skeleton: fetching the population time series for a country. For this, we'll be working inside the file *myChart.js*.
 
-We already know where to get the World Bank data. The example URL that we looked at before was https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json. And we also found out that the two important parts of the URL were *FIN* (the three-letter code for Finland), where we select the country, and *SP.POP.TOTL* (the indicator code for total population count), where we select the indicator that we want to data for. In this workshop, we will only be using the indicator *SP.POP.TOTL* but will be changing the country.
+We already know where to get the World Bank data. The example URL that we looked at before was https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json. And we also found out that the two important parts of the URL were *FIN* (the three-letter code for Finland), where we select the country, and *SP.POP.TOTL* (the indicator code for total population count), where we select the indicator that we want to data for. In this course, we will only be using the indicator *SP.POP.TOTL* but will be changing the country.
 
 So, let's insert the following function code into the bottom of the file *myChart.js*:
 ```
@@ -454,12 +454,12 @@ Looking good now! Seems like we have an MVP!
 ## Wrap-up
 What have we done? Short answer: we've built a working **front-end** application. Front-end refers to code that is executed in the user's browser: the HTML, CSS and Javascript. The front-end communicates with a **back-end**, which means servers where the application data is stored (usually in databases of some kind). In our application's case the back-end was offered by the World Bank; we did not have to build a separate back-end for our app since we did not need e.g. authentication of the users or save any data about the users. The World Bank had done a lot of work collecting and proprocessing the data, has it stored in databases and offers it to us through a web API. Thank you World Bank! Very often the front-end communicates with the back-end using HTTP requests, just like our front-end does.
 
-In this workshop, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have build a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realized that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
+During this course, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have build a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realized that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
 
 So hopefully you have enjoyed the journey and have some new skills and insights to take home!
 
 ## Feedback
-We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself. Feedback helps us recognize what is working and which parts we should still improve for the future.
+We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
 Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 2 minutes. 
 
