@@ -2,24 +2,41 @@
 
 Welcome to the amazing world of web coding! In this short course we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
+## Time requirement for the course
+Our initial estimate is that it it possible to complete the pre-work part in 3-5 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that the person is comfortable using a computer and a browser.
+
+## Beta testers
+Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
+
+Support from peers (other participants) and from organizers is offered on Slack (you will get the link separately). Slack is the main forum for questions, discussion, ideas and feedback. Please keep in mind that we as organizers are doing this mainly voluntarily and can offer support only within our limits. For the actual implementation, peer support will be the main form of support.
+
+We are especially interested in your feedback on:
+- The amount of time you spend on the pre-work (this will likely vary quite a bit depending on your background)
+- The amount of time you spend on setting up tools
+- The amount of time you spend on the main part (building the Population graphs app)
+- Which parts are hard to follow and need clarification or better instructions
+- Which parts work well
+- Ways to improve the small assignments (intertwined in the material)
+- What bonus assignments look interesting
+- What bonus assignments could be added 
+
+There is a feedback questionnaire at the end, but you can also post feedback on a more daily basis on Slack. All feedback is highly appreciated!
+
 ## Prerequisites
 You will need to have Visual Studio Code installed on your computer. If you have not installed it, please do so now at https://code.visualstudio.com/. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
 
 Visual Studio Code is a handy code editor. It's not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. 
 
 ## Pre-work
-Read and do the simple exercises in the following materials before continuing with this course. The pre-work will give you the basic understanding you will need for building the app on this course. All pre-work materials are by Mozilla. Total time required for the pre-work is ~3-5 hours. 
+Read and do the simple exercises in the following materials before continuing with this course. The pre-work will give you the basic understanding you will need for building the app on this course. All pre-work materials are by Mozilla. Total time required for the pre-work is ~3-5 hours. You can customize the depth of how you do the pre-work according to your background and goal for the course. If you for example already know HTML quite well, you can just skip the HTML part. If you are really interested, do all the small exercises given. But at a minimum read through the material and try some interesting small assignments on your computer.
 - [Getting started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [What is CSS?](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
 - [Getting started with CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
 - [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 
-## Time requirement for the course
-Our initial estimate is that it it possible to build the population graphs app in one working day (8 hours). This assumes no previous programming experience, but does assume that the person starting this course has completed the pre-work defined above and is comfortable using a computer and a browser.
-
 ## Goal
-In this short course, we are building a web app that can **visualize the population time series** for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries' population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners' pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  
+In this short course, we are going to build a web app that can **visualize the population time series** for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries' population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners' pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  
 
 So the beef of the app would be something like this graph (which shows the population graph of Nigeria):
 
@@ -484,5 +501,5 @@ If you are still eager to learn more and improve you app, here are some assignme
 ## Technical
 Author: Mikko Kotola 2020  
 License: MIT  
-Made using markdown and Abricotine editor  
+Made using markdown  
 World Bank data license: CC-BY-4.0
