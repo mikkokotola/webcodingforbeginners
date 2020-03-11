@@ -116,7 +116,7 @@ So, you managed to change the title and add a heading. Now reload the file in yo
 ![Titles inserted](./pics/titles.png)
 
 ## Our aim: Walking skeleton, MVP
-Our aim will be to get a minimal working version of the application as soon as possible. This is almost always the preferred approach to building an application. A minimal version that has all the needed parts is sometimes called the **Walking skeleton**. It has all the body parts but not much flesh around the bones. The reason for this approach is that it's easier to get the different part to work together if it's done early on. Once we have all the needed parts and we know they work together, it's much less risky to add functionality and make the different parts prettier.
+Our aim will be to get a minimal working version of the application as soon as possible. This is almost always the preferred approach to building an application. A minimal version that has all the needed parts is sometimes called the **Walking skeleton**. It has all the body parts but not much flesh around the bones. The reason for this approach is that it's easier to get the different parts to work together if it's done early on. Once we have all the needed parts and we know they work together, it's much less risky to add functionality and make the different parts prettier.
 
 Our walking skeleton will have
 
@@ -141,7 +141,7 @@ Add the following HTML line under the &lt;h1> element in your index.html file:
 
 Save the file and reload the page in your browser. Try inputting text into the field.
 
-Let's look at the line we just inserted. It it an *input* element, which is used for getting user input. The input element has many *attributes*. It has *class*, which we will use later for making it prettier and an *id*, a unique identifier for this element which we will use in a moment. The class and id is not doing anything yet. But the *placeholder* is. And it's value is a bit funny. Change the value of the placeholder to `Country` and reload the page in your browser. The type *text* defines that we want text input and the *maxlength* limits the amount of characters the user can input. The current value is bit off. Fix it so that the user can only enter 3 characters. 
+Let's look at the line we just inserted. It it an *input* element, which is used for getting user input. The input element has many *attributes*. It has *class*, which we will use later for making it prettier and an *id*, a unique identifier for this element which we will use in a moment. The class and id are not doing anything yet. But the *placeholder* is. And it's value is a bit funny. Change the value of the placeholder to `Country` and reload the page in your browser. The type *text* defines that we want text input and the *maxlength* limits the amount of characters the user can input. The current value is bit off. Fix it so that the user can only enter 3 characters. 
 
 Nice. Let's also add an instruction text line so that the user can check what the 3-letter codes are if she can't guess it by heart. So add this line before the input element:
 ```
@@ -189,7 +189,7 @@ Add the following code just before the &lt;/body> tag (at the end of the body of
     </script>
 ```
 
-Notice how much easier it it to look at in Visual Studio Code with the colours indicating different types of elements. One pro tip for Visual Studio Code is also the key combination `Shift + Alt + F`, which formats the current document according to its type. So it format HTML like HTML should be indented and Javascript like Javascript should be, making it easy to read and saving you from manually having to fix indentations, linings and extra spaces in the code. Try putting some extra spaces in your code and then hitting `Shift + Alt + F`.
+Notice how much easier it it to look at in Visual Studio Code with the colours indicating different types of elements. One pro tip for Visual Studio Code is also the key combination `Shift + Alt + F`, which formats the current document according to its type. So it formats HTML like HTML should be formatted and Javascript like Javascript should be, making it easy to read and saving you from manually having to fix indentations, linings and extra spaces in the code. Try putting some extra spaces in your code and then hitting `Shift + Alt + F`.
 
 Now try out our updated app in your browser.
 
@@ -231,18 +231,18 @@ Now try the app in your browser and check that the country codes are still logge
 - [index.html](https://github.com/mikkokotola/populationgraphs/blob/994708304bc15f8cdb31bf0d16ee7eef701ce127/public/index.html)
 - [myChart.js](https://github.com/mikkokotola/populationgraphs/blob/994708304bc15f8cdb31bf0d16ee7eef701ce127/public/myChart.js)
 
-So what did we just do? It's called **refactoring**. We changed the structure of the code without changing how the code works. We moved the Javascript code from within the *&lt;/script>* tags to a separate Javascript file (with a file ending .js) and added one line in the head of the *index.html* to load those scripts from the separate file. 
+So what did we just do? It's called **refactoring**. We changed the structure of the code without changing how the code works. We moved the Javascript code from within the *&lt;script>* tags to a separate Javascript file (with a file ending .js) and added one line in the head of the *index.html* to load those scripts from the separate file. 
 
-The attributes of the loading line are important. The first one it *defer*. This tells the browser to wait for the HTML structure to load before running the script file. If we did not have this, the browser would try to look for the button to attach an event handler to, but would not find any button, because it would not have been created yet. The second attribute is *src='./myChart.js'*. This just tells where the script to load is located (the *src* is short for *source*). The *./* part means to look in the same folder as where the *index.html* is located.
+The attributes of the loading line are important. The first one is *defer*. This tells the browser to wait for the HTML structure to load before running the script file. If we did not have this, the browser would try to look for the button to attach an event handler to, but would not find any button, because it would not have been created yet. The second attribute is *src='./myChart.js'*. This just tells where the script to load is located (the *src* is short for *source*). The *./* part means to look in the same folder as where the *index.html* is located.
 
 Great, now we can write new scripts in the file *myChart.js* and they will always be loaded when we reload the index.html in our browser!
 
 ## Fetching data
 Let's move to the second part of the walking skeleton: fetching the population time series for a country. For this, we'll be working inside the file *myChart.js*.
 
-We already know where to get the World Bank data. The example URL that we looked at before was https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json. And we also found out that the two important parts of the URL were *FIN* (the three-letter code for Finland), where we select the country, and *SP.POP.TOTL* (the indicator code for total population count), where we select the indicator that we want to data for. In this course, we will only be using the indicator *SP.POP.TOTL* but will be changing the country.
+We already know where to get the World Bank data. The example URL that we looked at before was https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json. And we also found out that the two important parts of the URL were *FIN* (the three-letter code for Finland), where we select the country, and *SP.POP.TOTL* (the indicator code for total population count), where we select the indicator that we want to data for. In the main part of this course, we will only be using the indicator *SP.POP.TOTL* but will be changing the country (but there is a bonus assignment challenging you to try another indicator).
 
-So, let's insert the following function code into the bottom of the file *myChart.js*:
+So, insert the following code into the bottom of the file *myChart.js*:
 ```
 async function fetchData() {
     var countryCode = document.getElementById('country').value;
@@ -260,12 +260,11 @@ async function fetchData() {
 }
 ```
 
-
-And then modify the line, where we attach a callback function to the event listener (remember, this just tells the event listener which function to call when someone click the button). Change the `logCountryCode` on that line to `fetchData`.
+And then modify the line where we attach a callback function to the event listener (remember, this just tells the event listener which function to call when someone click the button). Change the `logCountryCode` on that line to `fetchData`.
 
 Try it out by entering *FIN* and pressing the button.
 
-You should something new in you console. The first line is understandable. It says 'Fetching data from ' and then shows the same URL we've already seen. But the second line looks a bit more weird.
+You should see something new in your console. The first line is understandable. It says 'Fetching data from ' and then shows the same URL we've already seen. But the second line looks a bit more weird.
 
 ![Array in console](./pics/console_array.png)
 
@@ -300,7 +299,7 @@ Looks like we have two out of three down on our walking skeleton list!:
 
 ## Visualizing data
 
-Our skeleton is starting only missing it's legs. Let's attack the last part: visualizing the population time series.
+Our walking skeleton is only missing its legs. Let's attack the last part: visualizing the population time series.
 
 Here's some good news: visualizing data is very common in web applications, so it has been done before. And because coders like to reuse their previous work, people have built ready-to-use high-level tools for creating charts and graphs. And many of them are free to use and **open-source** (meaning the source code is available publicly for anyone to read and to contribute to). We are going to do our visualizations using [Chart.js](https://www.chartjs.org/).
 
@@ -363,18 +362,18 @@ The rest of the code consists of a call `new Chart(ctx, {...})`. This is where w
 
 We've got all the pieces now. Let's put them together by modifying the if-block within the fetchData() function. Add the four lines below at the end of the if-block. The whole if-block will then look like this:
 ```
- 	if (response.status == 200) {
+    if (response.status == 200) {
         var fetchedData = await response.json();
         console.log(fetchedData);
 
         var data = getValues(fetchedData);
         var labels = getLabels(fetchedData);
         var countryName = getCountryName(fetchedData);
-		renderChart(data, labels, countryName);
+        renderChart(data, labels, countryName);
     }
 ```
 
-The three new lines will call the functions we defined above. The first line extracts the actual population data values from the fetchedData object. The second line extracts the labels. And the third line gives the data and the labels to the function renderChart asking it to draw the chart.
+The top three new lines will call the functions we defined above. The first line extracts the actual population data values from the fetchedData object. The second line extracts the labels. And the third line extracts the countryName. The fourth new line gives the data, the labels and the countryName to the function renderChart asking it to draw the chart.
 
 Time to try it out in the browser!
 
@@ -404,7 +403,7 @@ How could we fix the bug? The root cause is that we are not cleaning up our whit
 - Saving the reference to the chart to that variable when a new chart is created. So `currentChart = new Chart(...`
 - Destroying the old chart (if it exists) before drawing a new one. So just before the `currentChart = new Chart(...` add 
 ```
-	if (currentChart) {
+    if (currentChart) {
         // Clear the previous chart if it exists
         currentChart.destroy();
     }
@@ -412,7 +411,7 @@ How could we fix the bug? The root cause is that we are not cleaning up our whit
 
 There is (sort of) also another problem. Even though the population graph looks visually nice, the population changes always look quite dramatic. That is because by default, Chart.js does not start the y-axis at zero. It would be more truthful to start the y-axis at zero. Let's add the needed parameters to the `new Chart(...)` definition. The new part is the *options* part. 
 ```
-	currentChart = new Chart(ctx, {
+    currentChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: labels,
@@ -470,17 +469,20 @@ Looking good now! Seems like we have an MVP!
 ## Wrap-up
 What have we done? Short answer: we've built a working **front-end** application. Front-end refers to code that is executed in the user's browser: the HTML, CSS and Javascript. The front-end communicates with a **back-end**, which means servers where the application data is stored (usually in databases of some kind). In our application's case the back-end was offered by the World Bank; we did not have to build a separate back-end for our app since we did not need e.g. authentication of the users or save any data about the users. The World Bank had done a lot of work collecting and proprocessing the data, has it stored in databases and offers it to us through a web API. Thank you World Bank! Very often the front-end communicates with the back-end using HTTP requests, just like our front-end does.
 
-During this course, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have build a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realized that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
+During this course, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have build a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realize that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
 
-So hopefully you have enjoyed the journey and have some new skills and insights to take home!
+That's it for the basic part of this course! Hopefully you have enjoyed the journey and have some new skills and insights to take home! If you still want to continue learning and improving your Population Graphs app, there are several options for extra assignments below. But at this point, please submit your code files and take a moment to give feedback about the course.
+
+## Submit your files
+*The link for submitting files will be added here.*
 
 ## Feedback
 We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
-Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 2 minutes. 
+Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 3-5 minutes. 
 
 ## Extra assignments
-If you are still eager to learn more and improve you app, here are some assignments to improve the app.
+If you are still eager to learn more and improve you app, here are some assignments to improve the app. You can look through them and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
 
 ### Small assignments
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
@@ -497,8 +499,17 @@ If you are still eager to learn more and improve you app, here are some assignme
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
+## Thanks
+Thanks to 
+- *#mimmitkoodaa* for amazing work in diversifying the coder tribe in Finland
+- *Sympa* for participating in #mimmitkoodaa and making possible this course
+- *World Bank* for the data
+- *Mozilla* for the tutorials
+- *University of Helsinki* and especially *Matti Luukkainen* for excellent examples on how to build and implement MOOCs. This MOOC follows the same spirit and borrows happily the ideology and pedagogy.
+
 ## Technical
 Author: Mikko Kotola 2020  
 License: MIT  
+Prepared for #mimmitkoodaa beginner workshop by Sympa
 Made using markdown  
 World Bank data license: CC-BY-4.0
