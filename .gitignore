@@ -1,3 +1,5 @@
+betatest/
+
 # Google cloud deployment files
 .gcloudignore
 app.yaml
