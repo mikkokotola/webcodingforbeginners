@@ -82,7 +82,7 @@ Now of course the API does not offer data on only Finland and only the total pop
 ## Basic view with titles
 OK, so we know that we have access to the data we need for our app. Let's get started with building it. 
 
-We'll start with a minimal HTML file. Download the file at https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html
+We'll start with a minimal HTML file. Download the file at [https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html](https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html)
 
 If you open the file in Chrome, it will most likely open in your browser as a page. You can save the file to your own computer by pressing `Ctrl + S`. Create a folder in a suitable location on your computer. Name your folder e.g. *PopulationGraphs* and save the file *index.html* inside that folder.
 
