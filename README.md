@@ -499,6 +499,9 @@ If you are still eager to learn more and improve you app, here are some assignme
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
+## What next?
+If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/) are an excellent choice. Mooc.fi offers courses in English and Finnish.
+
 ## Thanks
 Thanks to 
 - *#mimmitkoodaa* for amazing work in diversifying the coder tribe in Finland
