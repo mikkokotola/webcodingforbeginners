@@ -8,7 +8,7 @@ Our initial estimate is that it it possible to complete the pre-work part in 3-5
 ## Beta testers
 Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
 
-There are two alternative layouts for this material page. You may use the material from [https://sympaoy.github.io/webcodingforbeginners/] or from [https://github.com/SympaOy/webcodingforbeginners]. The content is identical (and both versions update live if there are updates during the beta).
+There are two alternative layouts for this material page. You may use the material from [https://sympaoy.github.io/webcodingforbeginners/](https://sympaoy.github.io/webcodingforbeginners/) or from [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners). The content is identical (and both versions update live if there are updates during the beta).
 
 Support from peers (other participants) and from organizers is offered on Slack (you will get the link separately). Slack is the main forum for questions, discussion, ideas and feedback. Please keep in mind that we as organizers are doing this mainly voluntarily and can offer support only within our limits. For the actual implementation, peer support will be the main form of support.
 
