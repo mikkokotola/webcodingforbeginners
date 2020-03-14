@@ -1,4 +1,5 @@
 betatest/
+Exports/
 
 # Google cloud deployment files
 .gcloudignore

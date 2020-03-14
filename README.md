@@ -5,6 +5,15 @@ Welcome to the amazing world of web coding! In this short course we will build a
 ## Time requirement for the course
 Our initial estimate is that it it possible to complete the pre-work part in 3-5 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
 
+## Completing the course and feedback
+If you wish to complete the course, follow the instructions for submitting your files at the end of the material. All finishers will get a diploma. If you want to do the course just for learning, you can follow the material, do the quizzes and give feedback but skip submitting your files.
+
+The quizzes in the material are meant to support your learning. The results are collected only anonymously. Completing the quizzes is not required for completing the course.
+
+The feedback for the course is collected anonymously. Giving feedback is optional.
+
+The quizzes and the feedback are implemented using Microsoft Forms and the anonymous data is saved by Sympa.
+
 ## Beta testers
 Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
 
@@ -53,8 +62,6 @@ Simple. Let's try to keep it that way.
 ## Tools
 So how are we going to build the web app? What will we need? Take a moment to name some of the technologies and things you can recall from the pre-work Mozilla tutorials - or just venture a good guess - before moving on. 
 
-
-
 Guessed something? Good. Most likely you remembered some of the following:
 
 - **HTML** (Hypertext Markup Language) for creating the structure of the user interface (UI, the page the user sees and can interact with) 
@@ -69,17 +76,19 @@ Enter **World Bank**. Our friends in Washington D.C. provide loans and grants to
 
 World Bank offers the population data through an **API**, an application programming interface. In English, an API means that we can send a message to the World Bank computer system saying *Give me the population time series of Finland* and the system sends it back to us in a reply message. So it's like a defined way of talking to the World Bank system.
 
-So how do we actually talk to the World Bank API? Well to get the population time series of Finland, we send a request to the address https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json. Whoa, that looks ugly and complicated! But hey, let's try it. So, open your browser (e.g. Google Chrome) and copy that address to the address input field and hit enter. Yes, do it now.
+So how do we actually talk to the World Bank API? Well to get the population time series of Finland, we send a request to the address [https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json](https://api.worldbank.org/v2/country/FIN/indicator/SP.POP.TOTL?format=json). Whoa, that looks ugly and complicated! But hey, let's try it. So, open your browser (e.g. Google Chrome) and copy that address to the address input field and hit enter. Yes, do it now.
 
 You should see a screen like this:
 
 ![World Bank JSON data](./pics/api_finland.png)
 
-It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5518050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)*). 
+It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5 518 050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)*). 
 
-Take a look and see if you can find what is the earliest year in the time series.
+<iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUMVFNMUlLNzdLSkdaUlVZMlNTMURXTFlKRy4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 Now of course the API does not offer data on only Finland and only the total population. If you're feeling curious, you can see what happens if you exchange the FIN part in the address to ITA? What about if you change the part SP.POP.TOTL to SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN? There seems to be a lot of data at our fingertips!
+
+<iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUOTVSQkRVSDZHVzlZNTVRODBVS0w0R0ZFSC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 ## Basic view with titles
 OK, so we know that we have access to the data we need for our app. Let's get started with building it. 
@@ -202,6 +211,10 @@ In your browser, hit `Ctrl + Shift + I`. You should see the *developer tools* op
 ![Logging data to console](./pics/console.png)
 
 Now that you opened the console, try it out a bit more. Type or copy-paste `console.log('Hi there!')` in the console and hit enter. Try also `1+8`. And  `var result = 1+8` and then `result`.
+
+<iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUMDRKOFBKTDJNTzg1U0xPMTUxQkhMWDBQRi4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+If you have something extra on your browser page during the quiz, just reload the page in your browser to reset it.
 
 So when you type in Javascript code to the console, the console will execute it. Now type some country code into the input field and run `logCountryCode ()` in the console. You should see the text you had in the input field printed in the console. You have just *called* the function logCountryCode from the console. So the console executed the two lines of code inside that function. A **function** is a piece of code that can be reused by calling it several times. You can give a function some input parameters (our function does not have any, the brackets in the function definition are empty). And it always returns some value to the caller. You actually already saw in your console what our function returns: `undefined`. That's Javascript and means 'nothing'. Our function returns nothing. It currently does the logging and does not need to return any value to the caller.
 
@@ -335,7 +348,7 @@ function getCountryName(data) {
 }
 ```
 
-These helper functions will extract the actual population counts, the year labels and the country name from the data array that we got from the World Bank (and that we printed in the console). Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet.
+These helper functions will extract the actual population counts, the year labels and the country name from the data array that we got from the World Bank (and that we printed in the console). In essence, each method takes the whole data array, selects only the main time series list (not the metadata) for processing, sorts it by year and selects only the wanted piece of data from each year. Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet.
 
 Then we'll see how our new tool works. Let's add this function that will render the actual population graph using the population data, the year labels and the country name:
 ```
@@ -385,6 +398,8 @@ Woohoo! We have liftoff! With the country code FIN, it should look like this:
 
 **The skeleton is walking!** Try with some different country codes. Celebrate! Have a cup of coffee, you've earned it! 
 
+<iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUNzk4NkgwRzg4VjNKV1NCNERVNjRMOUdTRC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
 If this is all you have time for, you can be proud. You have just built a working web app! You are running it locally, but it could easily be put to a hosting service, available for anyone to use.
 
 If you still have time, there are still several things we can do to improve the app.
@@ -397,7 +412,9 @@ Cleaning up dead code is important. If you don't, your files will become clutter
 
 ## Bug-hunting
 
-At this point you might have noticed that there is a bug in our app. Can you find it? When does it occur? Do you have ideas on what might be causing it? Try to find it and think about it a bit before continuing. Or talk to a friend or instructor if you can't find it.
+At this point you might have noticed that there is a bug in our app. Can you find it? When does it occur? Do you have ideas on what might be causing it? Try to find it and think about it a bit before continuing. 
+
+<iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUMDFONUw5MEYwUFlYVjIzVEM5M1NOQ0ROMi4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 How could we fix the bug? The root cause is that we are not cleaning up our whiteboard in between drawing different population graphs. So there are several there, although only one at a time is displayed. Let's fix the bug by saving a reference to a chart when we draw it, and then wiping the previous chart away before drawing a new one. You can accomplish this by
 
@@ -475,13 +492,14 @@ During this course, you have learned to work with the essential technologies of 
 
 That's it for the basic part of this course! Hopefully you have enjoyed the journey and have some new skills and insights to take home! If you still want to continue learning and improving your Population Graphs app, there are several options for extra assignments below. But at this point, please submit your code files and take a moment to give feedback about the course.
 
-## Submit your files
-*The link for submitting files will be added here.*
-
 ## Feedback
 We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
 Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 3-5 minutes. 
+
+## Submit your files
+*Instructions for submitting files will be added here. Beta group member: If you have gotten this far and are ready to submit, but the instructions are still missing, contact Mikko.*
+
 
 ## Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. You can look through them and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
