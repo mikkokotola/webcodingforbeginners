@@ -17,7 +17,7 @@ The quizzes and the feedback are implemented using Microsoft Forms and the anony
 ## Beta testers
 Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
 
-There are two alternative layouts for this material page. You may use the material from [https://sympaoy.github.io/webcodingforbeginners/](https://sympaoy.github.io/webcodingforbeginners/) or from [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners). The content is identical (and both versions update live if there are updates during the beta).
+NOTE: there were 5 embedded quizzed added to the material 14.3. Those are only properly embedded when using the material at the address [https://sympaoy.github.io/webcodingforbeginners/](https://sympaoy.github.io/webcodingforbeginners/), so please use the material at that address (which is different from the one originally given to beta participants). Otherwise the content is identical at [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners). The material will very likely update somewhat during the beta, but the main structure and content will not change.
 
 Support from peers (other participants) and from organizers is offered on Slack (you will get the link separately). Slack is the main forum for questions, discussion, ideas and feedback. Please keep in mind that we as organizers are doing this mainly voluntarily and can offer support only within our limits. For the actual implementation, peer support will be the main form of support.
 
