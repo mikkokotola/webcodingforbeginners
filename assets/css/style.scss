@@ -21,3 +21,7 @@ $table-border-color: #fdf0e6 !default;
 $hr-border-color: #fdf0e6 !default;
 
 @import "{{ site.theme }}";
+
+body {
+    font-family: "Zeitung Micro Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
