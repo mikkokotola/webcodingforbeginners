@@ -34,7 +34,7 @@ We are especially interested in your feedback on:
 There is a feedback questionnaire at the end, but you can also post feedback on a more daily basis on Slack. All feedback is highly appreciated!
 
 ## Prerequisites
-You will need to have Visual Studio Code installed on your computer. ==If you have not installed it, please do so now== at [https://code.visualstudio.com/](https://code.visualstudio.com/). Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
+You will need to have Visual Studio Code installed on your computer. If you have not installed it, please do so now at [https://code.visualstudio.com/](https://code.visualstudio.com/). Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
 
 Visual Studio Code is a handy code editor. It's not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. 
 
