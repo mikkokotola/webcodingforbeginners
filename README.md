@@ -502,7 +502,7 @@ Give feedback using the [feedback form](https://forms.office.com/Pages/ResponseP
 ## Submit your files
 *Instructions for submitting files will be added here. Beta group member: If you have gotten this far and are ready to submit, but the instructions are still missing, contact Mikko.*
 
-![Sympa wings!](C:\WORK\random\WorldBank_instructions\pics\sympa_siivet.jpg)
+![Sympa wings!](./pics/sympa_siivet.jpg)
 
 ## Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. You can look through them and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
@@ -533,7 +533,7 @@ Thanks to
 - *Mozilla* for the tutorials
 - *University of Helsinki* and especially *Matti Luukkainen* for excellent examples on how to build and implement MOOCs. This MOOC follows the same spirit and borrows happily the ideology and pedagogy.
 
-![Sympa bull and unicorn](C:\WORK\random\WorldBank_instructions\pics\sympa_bull&unicorn.jpg)
+![Sympa bull and unicorn](./pics/sympa_bull&unicorn.jpg)
 
 ## Technical
 Author: Mikko Kotola 2020  
