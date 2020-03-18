@@ -1,6 +1,8 @@
+![Sympa superwoman](./pics/SYMPA_superwoman.jpg)
+
 # Web Coding for Beginners: Population Graphs
 
-Welcome to the amazing world of web coding! In this short course we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
+Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
 ## Time requirement for the course
 Our initial estimate is that it it possible to complete the pre-work part in 3-5 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
@@ -404,6 +406,8 @@ If this is all you have time for, you can be proud. You have just built a workin
 
 If you still have time, there are still several things we can do to improve the app.
 
+![Job done and having a coffee!](./pics/sympa_jobdone.jpg)
+
 ## Clean-up
 
 Time to do some clean-up. We are no longer using the function logCountryCode so remove it from the js file. Remove also the comment before the event listener line. So the first line of the file will be ` document.getElementById('renderBtn').addEventListener('click', fetchData);` after the clean-up.
@@ -500,6 +504,7 @@ Give feedback using the [feedback form](https://forms.office.com/Pages/ResponseP
 ## Submit your files
 *Instructions for submitting files will be added here. Beta group member: If you have gotten this far and are ready to submit, but the instructions are still missing, contact Mikko.*
 
+![Sympa wings!](./pics/sympa_siivet.jpg)
 
 ## Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. You can look through them and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
@@ -530,9 +535,12 @@ Thanks to
 - *Mozilla* for the tutorials
 - *University of Helsinki* and especially *Matti Luukkainen* for excellent examples on how to build and implement MOOCs. This MOOC follows the same spirit and borrows happily the ideology and pedagogy.
 
+![Sympa bull and unicorn](./pics/sympa_bull&unicorn.jpg)
+
 ## Technical
 Author: Mikko Kotola 2020  
-License: MIT  
-Prepared for #mimmitkoodaa beginner workshop by Sympa
+License (material except illustrations): MIT  
+Illustrations: (c) Sympa  
+Prepared for #mimmitkoodaa beginner workshop by Sympa  
 Made using markdown  
-World Bank data license: CC-BY-4.0
+World Bank data license: CC-BY-4.0  
