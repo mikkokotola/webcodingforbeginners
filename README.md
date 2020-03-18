@@ -1,5 +1,7 @@
 ![Sympa superwoman](./pics/SYMPA_superwoman.jpg)
 
+{:toc}
+
 # Web Coding for Beginners: Population Graphs
 
 Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
