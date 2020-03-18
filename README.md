@@ -537,8 +537,8 @@ Thanks to
 
 ## Technical
 Author: Mikko Kotola 2020  
-License: MIT  
+License (material except illustrations): MIT  
+Illustrations: (c) Sympa  
 Prepared for #mimmitkoodaa beginner workshop by Sympa  
 Made using markdown  
 World Bank data license: CC-BY-4.0  
-Illustrations: Sympa
