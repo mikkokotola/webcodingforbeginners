@@ -8,6 +8,7 @@
 
 Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
+# Technical stuff about the course
 ## Time requirement for the course
 Our initial estimate is that it it possible to complete the pre-work part in 3-5 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
 
@@ -44,7 +45,7 @@ You will need to have Visual Studio Code installed on your computer. If you have
 
 Visual Studio Code is a handy code editor. It's not too heavy but helps in many ways with coding. It for example colours the different kinds of HTML, CSS and Javascript elements in different colours to help you read the code. 
 
-## Pre-work
+# Pre-work
 Read and do the simple exercises in the following materials before continuing with this course. The pre-work will give you the basic understanding you will need for building the app on this course. All pre-work materials are by Mozilla. Total time required for the pre-work is ~3-5 hours. You can customize the depth of how you do the pre-work according to your background and goal for the course. If you for example already know HTML quite well, you can just skip the HTML part. If you are really interested, do all the small exercises given. But at a minimum read through the material and try some interesting small assignments on your computer.
 - [Getting started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [What is CSS?](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
@@ -52,6 +53,7 @@ Read and do the simple exercises in the following materials before continuing wi
 - [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 
+# Build the Population graphs app
 ## Goal
 In this short course, we are going to build a web app that can **visualize the population time series** for any country the user selects. Population time series are pretty interesting, they can tell their own stories about the history and present of countries. Some countries population is rapidly growing. Usually those are developing countries. Many western countries' population is stable or slightly declining. That means possible problems in the future as there is usually a larger pension-age population and less people in working age (partly or fully paying the pensioners' pensions!). Unfortunately major devastations like a civil war also show in a population graph as we will later see.  
 
@@ -500,6 +502,7 @@ During this course, you have learned to work with the essential technologies of 
 
 That's it for the basic part of this course! Hopefully you have enjoyed the journey and have some new skills and insights to take home! If you still want to continue learning and improving your Population Graphs app, there are several options for extra assignments below. But at this point, please submit your code files and take a moment to give feedback about the course.
 
+# Feedback and submission
 ## Feedback
 We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
@@ -514,30 +517,30 @@ You will get your course certificate by e-mail after we have checked your files 
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
 
-## Extra assignments
+# Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. However, before continuing, submit your files in their current state as you will be altering them during the extra assignments and they may no longer pass the automated checks after the alterations. 
 
 You can look through the extra assignments and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
 
-### Small assignments
+## Small assignments
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 - **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html).
 - **Get data for 60 years instead of 50.** As you have noticed the World Bank API is returning us data for the year range 1970-2019. Exactly 50 years. Why exactly 50 years? This has a direct connection to the first part of the response, which looks like this: `{"page":1,"pages":2,"per_page":50,"total":60,"sourceid":"2","lastupdated":"2020-02-27"}`. World Bank is offering the data separated into several pages. The metadata also tells us that there actually is 60 years worth of data available. Look at the documentation at https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures and change your code so that is requests 60 items per page instead of the default 50. After the change, you should see a population graph for 60 years instead of 50. Hint: try the request with your browser first to get it to work, and then move to editing the code.
 - **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. 
 
-### Medium-size assignments
+## Medium-size assignments
 - **Show country name and indicator name.** Our app is currently showing the country name only as a label within the graph. Add separate text paragraphs that display the country name and the indicator name. We are already extracting the country name from the fetchedData in the function getCountryName(data). Use that as an example and figure out how to extract the indicator name in a similar function getIndicatorName(data).
 - **Fetch information about the capital city and area of the country, and the image of the country flag** from [RESTCountries API](https://restcountries.eu/#api-endpoints-code) and display those along with the population graph. You will need to create new HTML elements and make a similar API request to RestCountries as you did to the World Bank API. For a point of comparison, you can look at the master branch of the [Population graphs repository](https://github.com/mikkokotola/populationgraphs).
 - **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
 
-### Large assignments
+## Large assignments
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
-## What next?
+# What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/) are an excellent choice. Mooc.fi offers courses in English and Finnish.
 
-## Thanks
+# Thanks
 Thanks to 
 - *#mimmitkoodaa* for amazing work in diversifying the coder tribe in Finland
 - *Sympa* for participating in #mimmitkoodaa and making possible this course
@@ -547,7 +550,7 @@ Thanks to
 
 ![Sympa bull and unicorn](./pics/sympa_bull&unicorn.jpg)
 
-## Technical
+# Technical
 Author: Mikko Kotola 2020  
 License (material except illustrations): MIT  
 Illustrations: (c) Sympa  
