@@ -502,12 +502,18 @@ We would love to get some feedback from you. Regardless of whether you have work
 Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 3-5 minutes. 
 
 ## Submit your files
-*Instructions for submitting files will be added here. Beta group member: If you have gotten this far and are ready to submit, but the instructions are still missing, contact Mikko.*
+Make sure you have the three files (index.html, styles.css and myChart.js) named exactly as instructed.
+
+Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNlhLVURVOTY2UUZEV0VKTDhDRVZVWkVKWCQlQCN0PWcu) to submit your files. After filling in the form, you will be displayed a link for submitting the files.
+
+You will get your course certificate by e-mail after we have checked your files have the required parts and functionality.
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
 
 ## Extra assignments
-If you are still eager to learn more and improve you app, here are some assignments to improve the app. You can look through them and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
+If you are still eager to learn more and improve you app, here are some assignments to improve the app. However, before continuing, submit your files in their current state as you will be altering them during the extra assignments and they may no longer pass the automated checks after the alterations. 
+
+You can look through the extra assignments and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
 
 ### Small assignments
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
