@@ -1,10 +1,16 @@
 ![Sympa superwoman](./pics/SYMPA_superwoman.jpg)
 
+# Contents
+{:.no_toc}
+
+* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
+
 
 # Web Coding for Beginners: Population Graphs
 
 Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
+
 
 ## Time requirement for the course
 Our initial estimate is that it it possible to complete the pre-work part in 3-5 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
