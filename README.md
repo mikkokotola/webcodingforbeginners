@@ -3,7 +3,7 @@
 # Contents
 {:.no_toc}
 
-* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+* Table of contents will be inserted here when this markdown is built by Jekyll
 {:toc}
 
 Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
@@ -259,6 +259,8 @@ So what did we just do? It's called **refactoring**. We changed the structure of
 The attributes of the loading line are important. The first one is *defer*. This tells the browser to wait for the HTML structure to load before running the script file. If we did not have this, the browser would try to look for the button to attach an event handler to, but would not find any button, because it would not have been created yet. The second attribute is *src='./myChart.js'*. This just tells where the script to load is located (the *src* is short for *source*). The *./* part means to look in the same folder as where the *index.html* is located.
 
 Great, now we can write new scripts in the file *myChart.js* and they will always be loaded when we reload the index.html in our browser!
+
+![Sympa machine](./pics/SYMPA_kone.jpg)
 
 ## Fetching data
 Let's move to the second part of the walking skeleton: fetching the population time series for a country. For this, we'll be working inside the file *myChart.js*.
