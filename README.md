@@ -272,10 +272,10 @@ async function fetchData() {
     const indicatorCode = 'SP.POP.TOTL';  
     const baseUrl = 'https://api.worldbank.org/v2/country/';
     const url = baseUrl + countryCode + '/indicator/' + indicatorCode + '?format=json';
-	console.log('Fetching data from URL: ' + url);
+    console.log('Fetching data from URL: ' + url);
 
     var response = await fetch(url);
-	
+
     if (response.status == 200) {
         var fetchedData = await response.json();
         console.log(fetchedData);
@@ -283,7 +283,7 @@ async function fetchData() {
 }
 ```
 
-And then modify the line where we attach a callback function to the event listener (remember, this just tells the event listener which function to call when someone click the button). Change the `logCountryCode` on that line to `fetchData`.
+And then modify the line where we attach a callback function to the event listener (remember, this just tells the event listener which function to call when someone clicks the button). Change the `logCountryCode` on that line to `fetchData`.
 
 Try it out by entering *FIN* and pressing the button.
 
@@ -496,9 +496,9 @@ It looks much better now! The population graph is maybe a bit large. Let's limit
 Looking good now! Seems like we have an MVP!
 
 ## Wrap-up
-What have we done? Short answer: we've built a working **front-end** application. Front-end refers to code that is executed in the user's browser: the HTML, CSS and Javascript. The front-end communicates with a **back-end**, which means servers where the application data is stored (usually in databases of some kind). In our application's case the back-end was offered by the World Bank; we did not have to build a separate back-end for our app since we did not need e.g. authentication of the users or save any data about the users. The World Bank had done a lot of work collecting and proprocessing the data, has it stored in databases and offers it to us through a web API. Thank you World Bank! Very often the front-end communicates with the back-end using HTTP requests, just like our front-end does.
+What have we done? Short answer: we've built a working **front-end** application. Front-end refers to code that is executed in the user's browser: the HTML, CSS and Javascript. The front-end communicates with a **back-end**, which means servers where the application data is stored (usually in databases of some kind). In our application's case the back-end was offered by the World Bank; we did not have to build a separate back-end for our app since we did not need e.g. authentication of the users or save any data about the users. The World Bank had done a lot of work collecting and preprocessing the data, has it stored in databases and offers it to us through a web API. Thank you World Bank! Very often the front-end communicates with the back-end using HTTP requests, just like our front-end does.
 
-During this course, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have build a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realize that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
+During this course, you have learned to work with the essential technologies of current web applications: HTML, CSS and Javascript. You have got your hands on some real World Bank data and used some tools offered to us by the web community: the visualization library Chart.js and the Bootstrap stylesheet. You have built a working web app. How was this possible? One notable factor making this possible is **openness**. We used open data from World Bank, open source code (the app itself and the mentioned tools) and worked using the open internet. Another view into the app is that we composed it by using several quite high-level pieces. This is in fact how many of the applications and services are born: the starting point is a customer need or an idea for a new service, and the application is built to realize that idea by using many different data sources and ready software components. There is not necessarily that much own code, and the code that is there is mainly tying together the different components to produce something new, something unique.
 
 That's it for the basic part of this course! Hopefully you have enjoyed the journey and have some new skills and insights to take home! If you still want to continue learning and improving your Population Graphs app, there are several options for extra assignments below. But at this point, please submit your code files and take a moment to give feedback about the course.
 
@@ -534,7 +534,7 @@ You can look through the extra assignments and pick any you would like. The orde
 - **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
 
 ## Large assignments
-- Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection].(https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
+- Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection) of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
 # What next?
