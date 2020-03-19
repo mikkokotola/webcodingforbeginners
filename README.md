@@ -260,7 +260,7 @@ The attributes of the loading line are important. The first one is *defer*. This
 
 Great, now we can write new scripts in the file *myChart.js* and they will always be loaded when we reload the index.html in our browser!
 
-![Sympa machine](./pics/SYMPA_kone.jpg)
+![Sympa machine](./pics/sympa_kone.jpg)
 
 ## Fetching data
 Let's move to the second part of the walking skeleton: fetching the population time series for a country. For this, we'll be working inside the file *myChart.js*.
