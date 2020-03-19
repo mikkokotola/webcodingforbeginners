@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
 title: "Web Coding for Beginners: Population Graphs"
 description: "Build a working web app to visualize population graphs for countries. In one day. With zero coding experience."
-github.is_project_page: false
+github:
+  is_project_page: false
