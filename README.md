@@ -1,5 +1,8 @@
 ![Sympa superwoman](./pics/SYMPA_superwoman.jpg)
 
+# #mimmitkoodaa MOOC by Sympa
+{:.no_toc}
+
 # Contents
 {:.no_toc}
 
@@ -12,14 +15,16 @@ Welcome to the amazing world of web coding! On this MOOC by Sympa we will build 
 ## Time requirement for the course
 Our initial estimate is that it it possible to complete the pre-work part in 3-8 hours and to build the population graphs app in about one working day (8 hours). This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
 
-## Completing the course and feedback
-If you wish to complete the course, follow the instructions for submitting your files at the end of the material. All finishers will get a diploma. If you want to do the course just for learning, you can follow the material, do the quizzes and give feedback but skip submitting your files.
+## Completing the course
+If you wish to complete the course, follow the instructions for submitting your files at the end of the material. All finishers will get a course certificate. If you want to do the course just for learning, you can follow the material, do the quizzes and give feedback but skip submitting your files.
 
 The quizzes in the material are meant to support your learning. The results are collected only anonymously. Completing the quizzes is not required for completing the course.
 
-The feedback for the course is collected anonymously. Giving feedback is optional.
+## Data privacy
 
-The quizzes and the feedback are implemented using Microsoft Forms and the anonymous data is saved by Sympa.
+The quiz answers and feedback for the course are collected anonymously. Filling in quizzes and giving feedback is optional. The quizzes and the feedback are implemented using Microsoft Forms.
+
+The course submission form and willingness to demo form include personal data (name, e-mail). [Privacy policy](./privacy_policy.md) is available.
 
 ## Beta testers
 Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
@@ -541,9 +546,18 @@ You can look through the extra assignments and pick any you would like. The orde
 # What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/) are an excellent choice. Mooc.fi offers courses in English and Finnish.
 
+# What is Sympa?
+The Sympa HR solution was designed to improve the lives of HR across the world. Providing companies an aggregated, clear view on all people data and unlimited integrations to other softwares, it supports smart decision-making and helps automate routine tasks. Backed up with great customer support, it’s currently used by more than 700 organisations – and has one of the highest customer satisfaction rates in HR technology in Europe. [Sympa](https://www.sympa.com/) employs 120 people internationally, with offices in Finland, Sweden, Denmark, Norway and the Netherlands.
+
+Read the [interview of Irene Koskinen]https://www.sympa.com/fi/blogi/koodaava-ex-katilo-irene-koskinen-kannustaa-mimmeja-tekniikan-pariin/, a sympatico (in Finnish).
+
+Check out the [careers](https://www.sympa.com/about/careers/) opportunities.
+
+![Sympa logo](./pics/sympa_logo.png)
+
 # Thanks
 Thanks to 
-- *#mimmitkoodaa* for amazing work in diversifying the coder tribe in Finland
+- *[#mimmitkoodaa](https://mimmitkoodaa.ohjelmistoebusiness.fi/)* for amazing work in diversifying the coder tribe in Finland
 - *Sympa* for participating in #mimmitkoodaa and making possible this course
 - *World Bank* for the data
 - *Mozilla* for the tutorials
@@ -555,6 +569,5 @@ Thanks to
 Author: Mikko Kotola 2020  
 License (material except illustrations): MIT  
 Illustrations: (c) Sympa  
-Prepared for #mimmitkoodaa beginner workshop by Sympa  
 Made using markdown  
 World Bank data license: CC-BY-4.0  
