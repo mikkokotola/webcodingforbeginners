@@ -1,15 +1,12 @@
 ![Sympa superwoman](./pics/SYMPA_superwoman.jpg)
 
-# #mimmitkoodaa MOOC by Sympa
-{:.no_toc}
-
 # Contents
 {:.no_toc}
 
 * Table of contents will be inserted here when this markdown is built by Jekyll
 {:toc}
 
-Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
+Welcome to the amazing world of web coding! On this **#mimmitkoodaa MOOC by Sympa** we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
 # Technical stuff about the course
 ## Time requirement for the course
