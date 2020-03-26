@@ -102,7 +102,7 @@ Now of course the API does not offer data on only Finland and only the total pop
 ## Basic view with titles
 OK, so we know that we have access to the data we need for our app. Let's get started with building it. 
 
-We'll start with a minimal HTML file. Download the file at [https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html](https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html)
+We'll start with a minimal HTML file. Download the [minimal HTML file](https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html) from GitHub.
 
 If you open the file in Chrome, it will most likely open in your browser as a page. You can save the file to your own computer by pressing `Ctrl + S`. Create a folder in a suitable location on your computer. Name your folder e.g. *PopulationGraphs* and save the file *index.html* inside that folder.
 
@@ -519,6 +519,12 @@ Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage
 You will get your course certificate by e-mail after we have checked your files have the required parts and functionality.
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
+
+
+## Willingness to demo
+If you have done some extra assignments after the initial submission and you would be willing to demo your version of the Population graphs app, please fill in your info here! We will select a few participants for demoing from those who have indicated their willingness. The online demo & interview session right after the course on 21.4.2020 at 17.00-17.45 (Finnish time). Everyone is welcome to join the session!
+
+Fill in the [willingness to demo form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNDYxSjhUMTlQVFAwMUw5NEcyV0c0RklPUiQlQCN0PWcu) at the latest at 19.4.2020 23.59.
 
 # Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. However, before continuing, submit your files in their current state as you will be altering them during the extra assignments and they may no longer pass the automated checks after the alterations. 
