@@ -429,15 +429,18 @@ At this point you might have noticed that there is a bug in our app. Can you fin
 
 How could we fix the bug? The root cause is that we are not cleaning up our whiteboard in between drawing different population graphs. So there are several there, although only one at a time is displayed. Let's fix the bug by saving a reference to a chart when we draw it, and then wiping the previous chart away before drawing a new one. You can accomplish this by
 
-- Defining a variable `var currentChart;` *outside* all functions. A variable like this is global and can be accessed by all functions. So put it at the very top of the js file.
-- Saving the reference to the chart to that variable when a new chart is created. So `currentChart = new Chart(...`
-- Destroying the old chart (if it exists) before drawing a new one. So just before the `currentChart = new Chart(...` add 
+- Defining a variable `var currentChart;` *outside* all functions. A variable like this is global and can be accessed by all functions. It's like a hook on which we'll always put a pointer to the current chart. So add a new line at the very top of the js file with the content `var currentChart;`.
+- Saving the reference to the chart to that variable when a new chart is created. This is where we put the pointer to the hook that we just created. So modify the line that starts `new Chart(...` to start like this  `currentChart = new Chart(...`
+- Destroying the old chart (if it exists) before drawing a new one. Let's add an if-block just before the line that we modified in the previous bullet (the one that starts `currentChart = new Chart(...`). Add this to that spot in the file: 
 ```
     if (currentChart) {
         // Clear the previous chart if it exists
         currentChart.destroy();
     }
 ```
+Bullets 2 and 3 should result in the beginning of the function renderChart looking like this:
+
+![Updated renderChart](./pics/bugfix.png)
 
 There is (sort of) also another problem. Even though the population graph looks visually nice, the population changes always look quite dramatic. That is because by default, Chart.js does not start the y-axis at zero. It would be more truthful to start the y-axis at zero. Let's add the needed parameters to the `new Chart(...)` definition. The new part is the *options* part. 
 ```
