@@ -556,7 +556,8 @@ Thanks to
 
 # Technical
 Author: Mikko Kotola 2020  
-License (material except illustrations): MIT  
+License for material except illustrations: CC-BY-4.0 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)
+License for code contained in the material: MIT  
 Illustrations: (c) Sympa  
 Prepared for #mimmitkoodaa beginner workshop by Sympa  
 Made using markdown  
