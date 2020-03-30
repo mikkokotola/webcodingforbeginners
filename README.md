@@ -562,11 +562,11 @@ options: {
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/){:target="_blank"} are an excellent choice. Mooc.fi offers courses in English and Finnish.
 
 # What is Sympa?
-The Sympa HR solution was designed to improve the lives of HR across the world. Providing companies an aggregated, clear view on all people data and unlimited integrations to other softwares, it supports smart decision-making and helps automate routine tasks. Backed up with great customer support, it’s currently used by more than 700 organisations – and has one of the highest customer satisfaction rates in HR technology in Europe. [Sympa](https://www.sympa.com/) employs 120 people internationally, with offices in Finland, Sweden, Denmark, Norway and the Netherlands.
+The Sympa HR solution was designed to improve the lives of HR across the world. Providing companies an aggregated, clear view on all people data and unlimited integrations to other softwares, it supports smart decision-making and helps automate routine tasks. Backed up with great customer support, it's currently used by more than 700 organisations - and has one of the highest customer satisfaction rates in HR technology in Europe. [Sympa](https://www.sympa.com/){:target="_blank"} employs 120 people internationally, with offices in Finland, Sweden, Denmark, Norway and the Netherlands.
 
-Read the [interview of Irene Koskinen]https://www.sympa.com/fi/blogi/koodaava-ex-katilo-irene-koskinen-kannustaa-mimmeja-tekniikan-pariin/, a sympatico (in Finnish).
+Read the [interview of Irene Koskinen](https://www.sympa.com/fi/blogi/koodaava-ex-katilo-irene-koskinen-kannustaa-mimmeja-tekniikan-pariin/){:target="_blank"}, a sympatico (in Finnish).
 
-Check out the [careers](https://www.sympa.com/about/careers/) opportunities.
+Check out the [careers](https://www.sympa.com/about/careers/){:target="_blank"} opportunities.
 
 ![Sympa logo](./pics/sympa_logo.png)
 
