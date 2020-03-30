@@ -512,14 +512,14 @@ That's it for the basic part of this course! Hopefully you have enjoyed the jour
 ## Feedback
 We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
-Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu). It will take you about 3-5 minutes. 
+Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
 
 ## Submit your files
 Make sure you have the three files (index.html, styles.css and myChart.js) named exactly as instructed.
 
-Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNlhLVURVOTY2UUZEV0VKTDhDRVZVWkVKWCQlQCN0PWcu) to submit your files. After filling in the form, you will be displayed a link for submitting the files.
+Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNlhLVURVOTY2UUZEV0VKTDhDRVZVWkVKWCQlQCN0PWcu){:target="_blank"} to submit your files. After filling in the form, you will be displayed a link for submitting the files. 
 
-You will get your course certificate by e-mail after we have checked your files have the required parts and functionality.
+After submitting, you will get an e-mail. If your submission passes the automated tests, your course certificate will be attached. If your submission does not pass all tests yet, you will get feedback on which tests are not passing, so you can fix your files and try submitting again.
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
 
@@ -535,9 +535,18 @@ If you are still eager to learn more and improve you app, here are some assignme
 You can look through the extra assignments and pick any you would like. The order does not really matter. The assignments do not have as detailed instructions as you have previously seen and will require you to think about what you want to achieve and find solutions yourself. Which is what coding is all about!
 
 ## Small assignments
-- **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
+- **Change the chart type to bar chart.** Look at Chart.js documentation for [bar chart](https://www.chartjs.org/docs/latest/charts/bar.html){:target="_blank"}. Switch your chart to be a bar chart instead of a line chart. Hint: this can be done by changing only one line in your code.
+- **Make your chart animation slower.** Add the configuration animation duration into the options part of your call to create the chart (same part where you set the y-axis to start at zero). The configuration sets the amount of time the animation of your chart takes in milliseconds. To set it to 10 seconds (= 10 000 milliseconds), you would do:
+```
+options: {
+    animation: {
+        duration: 10000
+    }
+}
+```
+- **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. [Mozilla color picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool){:target="_blank"}
 - **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html){:target="_blank"}.
-- **Get data for 60 years instead of 50.** As you have noticed the World Bank API is returning us data for the year range 1970-2019. Exactly 50 years. Why exactly 50 years? This has a direct connection to the first part of the response, which looks like this: `{"page":1,"pages":2,"per_page":50,"total":60,"sourceid":"2","lastupdated":"2020-02-27"}`. World Bank is offering the data separated into several pages. The metadata also tells us that there actually is 60 years worth of data available. Look at the documentation at https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures and change your code so that is requests 60 items per page instead of the default 50. After the change, you should see a population graph for 60 years instead of 50. Hint: try the request with your browser first to get it to work, and then move to editing the code.
+- **Get data for 60 years instead of 50.** As you have noticed the World Bank API is returning us data for the year range 1970-2019. Exactly 50 years. Why exactly 50 years? This has a direct connection to the first part of the response, which looks like this: `{"page":1,"pages":2,"per_page":50,"total":60,"sourceid":"2","lastupdated":"2020-02-27"}`. World Bank is offering the data separated into several pages. The metadata also tells us that there actually is 60 years worth of data available. Look at the [documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures){:target="_blank"} and change your code so that is requests 60 items per page instead of the default 50. After the change, you should see a population graph for 60 years instead of 50. Hint: try the request with your browser first to get it to work, and then move to editing the code.
 - **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. 
 
 ## Medium-size assignments
@@ -546,7 +555,7 @@ You can look through the extra assignments and pick any you would like. The orde
 - **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
 
 ## Large assignments
-- Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address https://api.worldbank.org/v2/country?format=json&per_page=400. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection){:target="_blank"} of the repository.
+- Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address [https://api.worldbank.org/v2/country?format=json&per_page=400](https://api.worldbank.org/v2/country?format=json&per_page=400){:target="_blank"}. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection){:target="_blank"} of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
 # What next?
@@ -560,6 +569,14 @@ Read the [interview of Irene Koskinen]https://www.sympa.com/fi/blogi/koodaava-ex
 Check out the [careers](https://www.sympa.com/about/careers/) opportunities.
 
 ![Sympa logo](./pics/sympa_logo.png)
+
+# Contributing
+This course material is licenced under the <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> and the Population graph app is licenced under the [MIT license](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"}. This means that both the material and the app are open source. You can contribute, modify, build upon and use the material (except for the Sympa illustrations) as long as you give appropriate credit to the original authors, provide a link to the license, and indicate if changes were made.
+
+So if you have ideas on improving the material (fixing mistakes, explaining something better, adding new assignments or even whole new parts), please [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo){:target="_blank"} the Github repository to your own account, improve and submit a pull request to the repository in question. If you don't have a Github account, you can create an account right away (for free) at [https://github.com/](https://github.com/){:target="_blank"}.
+
+* Repository for the course material: https://github.com/SympaOy/webcodingforbeginners
+* Repository for the Population graphs app: https://github.com/mikkokotola/populationgraphs
 
 # Thanks
 Thanks to 
