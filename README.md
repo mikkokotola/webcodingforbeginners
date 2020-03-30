@@ -23,25 +23,6 @@ The quiz answers and feedback for the course are collected anonymously. Filling 
 
 The course submission form and willingness to demo form include personal data (name, e-mail). [Privacy policy](./privacy_policy.md) is available.
 
-## Beta testers
-Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
-
-NOTE: there were 5 embedded quizzed added to the material 14.3. Those are only properly embedded when using the material at the address [https://sympaoy.github.io/webcodingforbeginners/](https://sympaoy.github.io/webcodingforbeginners/), so please use the material at that address (which is different from the one originally given to beta participants). Otherwise the content is identical at [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners). The material will very likely update somewhat during the beta, but the main structure and content will not change.
-
-Support from peers (other participants) and from organizers is offered on Slack (you will get the link separately). Slack is the main forum for questions, discussion, ideas and feedback. Please keep in mind that we as organizers are doing this mainly voluntarily and can offer support only within our limits. For the actual implementation, peer support will be the main form of support.
-
-We are especially interested in your feedback on:
-- The amount of time you spend on the pre-work (this will likely vary quite a bit depending on your background)
-- The amount of time you spend on setting up tools
-- The amount of time you spend on the main part (building the Population graphs app)
-- Which parts are hard to follow and need clarification or better instructions
-- Which parts work well
-- Ways to improve the small assignments (intertwined in the material)
-- What bonus assignments look interesting
-- What bonus assignments could be added 
-
-There is a feedback questionnaire at the end, but you can also post feedback on a more daily basis on Slack. All feedback is highly appreciated!
-
 ## Prerequisites
 You will need to have Visual Studio Code installed on your computer. If you have not installed it, please do so now at [https://code.visualstudio.com/](https://code.visualstudio.com/){:target="_blank"}. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
 
