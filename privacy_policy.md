@@ -14,7 +14,7 @@ tel. +358 290 001 200
 When you create a submission for the course or a submission for willingness to demo your application we ask you to provide us with the following personal information:
 Your name
 Email
-We use this information to send you the course certificate and instruction for claiming online versions of the certificate. We may also use your information for informing you about updates to the course material, about possible related course materials and contacting you for other matters (e.g. interview request) related to the course.
+We use this information to send you e-mails related to the course (with feedback on the submission and course certificate). We may also use your information for informing you about updates to the course material, about possible related course materials and contacting you for other matters (e.g. interview request) related to the course.
 
 During the course, all other data (information on quiz submissions, usage statistics of the material web page, feedback of the course) is collected anonymously and cannot be connected to a participant's personal information.
 
@@ -28,6 +28,8 @@ You have the right to request accessing, erasing and correcting your personal da
 
 ## 5. Transfer of data outside EEA
 The data we collect is stored by Microsoft, a U.S. based company. The data for Sympa as a European-based Microsoft Forms tenant is stored on servers in Europe and is not transferred outside EEA.
+
+Sympa is using an external e-mailing service provider, SendGrid, for the course. The name and e-mail address of participants may be transferred outside EEA during the e-mailing process.
 
 ## 6. Data security
 All data collected by Sympa is processed confidentially. Access to the data is made available only to a selected group of Sympa employees and is only processed for the above described purposes. The network and equipment of Sympa have been secured using appropriate measures.
