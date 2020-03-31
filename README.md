@@ -559,8 +559,8 @@ This course material is licenced under the <a rel="license" target="_blank" href
 
 So if you have ideas on improving the material (fixing mistakes, explaining something better, adding new assignments or even whole new parts), please [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo){:target="_blank"} the Github repository to your own account, improve and submit a pull request to the repository in question. If you don't have a Github account, you can create an account right away (for free) at [https://github.com/](https://github.com/){:target="_blank"}.
 
-* Repository for the course material: https://github.com/SympaOy/webcodingforbeginners
-* Repository for the Population graphs app: https://github.com/mikkokotola/populationgraphs
+* Repository for the course material: [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners){:target="_blank"}
+* Repository for the Population graphs app: [https://github.com/mikkokotola/populationgraphs](https://github.com/mikkokotola/populationgraphs){:target="_blank"}
 
 # Thanks
 Thanks to 
