@@ -491,9 +491,9 @@ That's it for the basic part of this course! Hopefully you have enjoyed the jour
 
 # Feedback and submission
 ## Feedback
-We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
+We would love to get some feedback from you. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
-Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
+Give feedback now about the main part (up to part wrap-up) using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
 
 ## Submit your files
 Make sure you have the three files (index.html, styles.css and myChart.js) named exactly as instructed.
@@ -503,7 +503,6 @@ Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage
 After submitting, you will get an e-mail. If your submission passes the automated tests, your course certificate will be attached. If your submission does not pass all tests yet, you will get feedback on which tests are not passing, so you can fix your files and try submitting again.
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
-
 
 ## Willingness to demo
 If you have done some extra assignments after the initial submission and you would be willing to demo your version of the Population graphs app, please fill in your info here! We will select a few participants for demoing from those who have indicated their willingness. The online demo & interview session right after the course on 21.4.2020 at 17.00-17.45 (Finnish time). Everyone is welcome to join the session!
@@ -538,6 +537,9 @@ options: {
 ## Large assignments
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address [https://api.worldbank.org/v2/country?format=json&per_page=400](https://api.worldbank.org/v2/country?format=json&per_page=400){:target="_blank"}. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection){:target="_blank"} of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
+
+## Feedback for the extras
+Give feedback about the extra assignments using the [feedback form for extras](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UQkNKRDdZT1JKV0lORjQ2NFlNSkJEN1BZNCQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
 
 # What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/){:target="_blank"} are an excellent choice. Mooc.fi offers courses in English and Finnish.
