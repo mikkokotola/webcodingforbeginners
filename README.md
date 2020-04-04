@@ -498,7 +498,7 @@ Give feedback now about the main part (up to part wrap-up) using the [feedback f
 ## Submit your files
 Make sure you have the three files (index.html, styles.css and myChart.js) named exactly as instructed.
 
-Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNlhLVURVOTY2UUZEV0VKTDhDRVZVWkVKWCQlQCN0PWcu){:target="_blank"} to submit your files. After filling in the form, you will be displayed a link for submitting the files. 
+Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUOVU3QzhIU0c0UzlJTTg3Qk5GTk1GSEhDNi4u){:target="_blank"} to submit your files. After filling in the form, you will be displayed a link for submitting the files. 
 
 After submitting, you will get an e-mail. If your submission passes the automated tests, your course certificate will be attached. If your submission does not pass all tests yet, you will get feedback on which tests are not passing, so you can fix your files and try submitting again.
 
