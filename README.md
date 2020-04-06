@@ -478,7 +478,7 @@ To take our own stylesheet into use, we have to import it like we did with the B
     <link rel="stylesheet" href="./styles.css">
 ```
 
-It looks much better now! The population graph is maybe a bit large. Let's limit the max size of the canvas. Do similar steps for the canvas: first wrap the canvas element in a `<div class='container'>...</div>` and then add a CSS definition for the class *container* that sets the width of the container to 75% of the width of the whole browser window: `width: 75vw;`. Add also this style definition in the separate css file (styles.css), it's always good practice to keep the styles in the separate file.
+It looks much better now! The population graph is maybe a bit large. Let's limit the max size of the canvas. Do similar steps for the canvas: first wrap the canvas element in a `<div class='container'>...</div>` and then add a CSS definition for the class *container* that sets the width of the container to 75% of the width of the whole browser window: `width: 75vw;`. Add also this style definition in the separate css file (styles.css), it's always good practice to keep the styles in the separate file. Make sure that the newly added `<div class='container'>...</div>` is *inside* the `<div class='content'>...</div>` that was added previously (so that the centering applies also to the container).
 
 Looking good now! Seems like we have an MVP!
 
