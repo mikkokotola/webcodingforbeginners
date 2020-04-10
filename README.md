@@ -536,7 +536,7 @@ options: {
 - **Use Corona data offered by THL & HS.** Our frontend in not limited to visualizing World Bank time series data. Change your frontend to visualize Corona infection data in Finland offered by Helsingin Sanomat (HS) based on official data by Terveyden ja hyvinvoinnin laitos (THL). The data is available at the address [https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData](https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData){:target="_blank"}. You will need the following changes to the basic version of the app:
     * Remove the restriction of 3 characters for the country code so the user can input as many letters as she wants
     * Change the url within fetchData to the URL above (the Corona data URL)
-    *  Use the following three functions to extract the correct data from the response
+    * Use the following three functions to extract the correct data from the response
 ```
 function getValuesCorona(data, areaCode) {
     var vals = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.value);
