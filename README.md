@@ -537,22 +537,22 @@ options: {
     * Remove the restriction of 3 characters for the country code so the user can input as many letters as she wants
     * Change the url within fetchData to the URL above (the Corona data URL)
     *  Use the following three functions to extract the correct data from the response
-    ```
-    function getValuesCorona(data, areaCode) {
-        var vals = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.value);
-        return vals;
-    }
+```
+function getValuesCorona(data, areaCode) {
+    var vals = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.value);
+    return vals;
+}
 
-    function getLabelsCorona(data, areaCode) {
-        var labels = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.date.substring(0,10));
-        return labels;
-    }
+function getLabelsCorona(data, areaCode) {
+    var labels = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.date.substring(0,10));
+    return labels;
+}
 
-    function getAreaName(data, areaCode) {
-        var areaName = data.confirmed[areaCode][0].healthCareDistrict;
-        return areaName;
-    }
-    ```
+function getAreaName(data, areaCode) {
+    var areaName = data.confirmed[areaCode][0].healthCareDistrict;
+    return areaName;
+}
+```
     * rename the variable that you are storing the user input from countryCode to areaCode (to better reflect what it is)
     * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData)`). Remember that the new functions now have 2 parameters, so all calls will need to have fetchedData and areaCode.
     * Update the call to renderChart to use the new areaName instead of countryName.
