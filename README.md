@@ -534,9 +534,15 @@ options: {
 - **Fetch information about the capital city and area of the country, and the image of the country flag** from [RESTCountries API](https://restcountries.eu/#api-endpoints-code){:target="_blank"} and display those along with the population graph. You will need to create new HTML elements and make a similar API request to RestCountries as you did to the World Bank API. For a point of comparison, you can look at the master branch of the [Population graphs repository](https://github.com/mikkokotola/populationgraphs){:target="_blank"}.
 - **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
 - **Use Corona data offered by THL & HS.** Our frontend in not limited to visualizing World Bank time series data. Change your frontend to visualize Corona infection data in Finland offered by Helsingin Sanomat (HS) based on official data by Terveyden ja hyvinvoinnin laitos (THL). The data is available at the address [https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData](https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData){:target="_blank"}. You will need the following changes to the basic version of the app:
-    * Remove the restriction of 3 characters for the country code so the user can input as many letters as she wants
-    * Change the url within fetchData to the URL above (the Corona data URL)
-    * Use the following three functions to extract the correct data from the response
+    * remove the restriction of 3 characters for the country code so the user can input as many letters as she wants
+    * change the url within fetchData to the URL above (the Corona data URL)
+    * use the three functions presented below to extract the correct data from the response (instead of the old ones)
+    * rename the variable that you are storing the user input from countryCode to areaCode (to better reflect what it is)
+    * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData)`). Remember that the new functions now have 2 parameters, so all calls will need to have fetchedData and areaCode.
+    * Update the call to renderChart to use the new areaName instead of countryName.
+    * Test by entering health care distict names like "HUS", "Lappi" and "Pirkanmaa"
+    * Change the label of the chart from "Population, " to "Confirmed infections, "
+    * You can read more about HS uses data at https://github.com/HS-Datadesk/koronavirus-avoindata
 
 ```
 function getValuesCorona(data, areaCode) {
@@ -554,13 +560,6 @@ function getAreaName(data, areaCode) {
     return areaName;
 }
 ```
-
-    * rename the variable that you are storing the user input from countryCode to areaCode (to better reflect what it is)
-    * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData)`). Remember that the new functions now have 2 parameters, so all calls will need to have fetchedData and areaCode.
-    * Update the call to renderChart to use the new areaName instead of countryName.
-    * Test by entering health care distict names like "HUS", "Lappi" and "Pirkanmaa"
-    * Change the label of the chart from "Population, " to "Confirmed infections, "
-    * You can read more about HS uses data at https://github.com/HS-Datadesk/koronavirus-avoindata
 
 ## Large assignments
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address [https://api.worldbank.org/v2/country?format=json&per_page=400](https://api.worldbank.org/v2/country?format=json&per_page=400){:target="_blank"}. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection){:target="_blank"} of the repository.
