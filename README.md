@@ -400,7 +400,11 @@ If you still have time, there are still several things we can do to improve the 
 
 ## Clean-up
 
-Time to do some clean-up. We are no longer using the function logCountryCode so remove it from the js file. Remove also the comment before the event listener line. So the first line of the file will be ` document.getElementById('renderBtn').addEventListener('click', fetchData);` after the clean-up.
+Time to do some clean-up. We are no longer using the function logCountryCode so remove it from the js file. Remove also the comment before the event listener line. So the first line of the file will be 
+```
+document.getElementById('renderBtn').addEventListener('click', fetchData);
+```
+after the clean-up.
 
 Cleaning up dead code is important. If you don't, your files will become cluttered with unused code and it will be hard to figure out what is actually being used and what is not. Keep it clean.
 
@@ -538,11 +542,11 @@ options: {
     * change the url within fetchData to the URL above (the Corona data URL)
     * use the three functions presented below to extract the correct data from the response (instead of the old ones)
     * rename the variable that you are storing the user input from countryCode to areaCode (to better reflect what it is)
-    * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData)`). Remember that the new functions now have 2 parameters, so all calls will need to have fetchedData and areaCode.
+    * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData);`). Remember that the new functions now have 2 parameters, so all calls will need to have `fetchedData` and `areaCode`.
     * Update the call to renderChart to use the new areaName instead of countryName.
-    * Test by entering health care distict names like "HUS", "Lappi" and "Pirkanmaa"
+    * Test by entering health care distict names like "HUS", "Lappi" and "Pirkanmaa". To show data for the whole country, enter "Kaikki sairaanhoitopiirit".
     * Change the label of the chart from "Population, " to "Confirmed infections, "
-    * You can read more about HS uses data at https://github.com/HS-Datadesk/koronavirus-avoindata
+    * You can read more about how HS uses the data at [https://github.com/HS-Datadesk/koronavirus-avoindata](https://github.com/HS-Datadesk/koronavirus-avoindata){:target="_blank"}
 
 ```
 function getValuesCorona(data, areaCode) {
@@ -600,7 +604,7 @@ Thanks to
 
 # Technical
 Author: Mikko Kotola 2020  
-License for material except illustrations: CC-BY-4.0 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)  
+License for material except illustrations: <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)  
 License for code contained in the material: MIT  
 Illustrations: (c) Sympa  
 Made using markdown  
