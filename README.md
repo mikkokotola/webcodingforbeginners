@@ -317,7 +317,7 @@ We will need two additions to *index.html*. First, add the following code the he
 
 This code will load the code for Chart.js into the browser from their hosting site. So we're loading the tool needed for creating the visualization. Notice that this line is very similar to loading our own script.
 
-Second, we need to add an HTML element where we can render the population graph. Graph.js requires a *canvas* element that can be used for drawing 2-dimensional graphics and animations. Add it by inserting this line at the end of the body:
+Second, we need to add an HTML element where we can render the population graph. Chart.js requires a *canvas* element that can be used for drawing 2-dimensional graphics and animations. Add it by inserting this line at the end of the body:
 ```
     <canvas id='myChart'></canvas>
 ```
