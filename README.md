@@ -573,6 +573,41 @@ function getAreaName(data, areaCode) {
 ## Feedback for the extras
 Give feedback about the extra assignments using the [feedback form for extras](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UQkNKRDdZT1JKV0lORjQ2NFlNSkJEN1BZNCQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
 
+# Additional tools and topics
+Here are a few tools and topics that were not covered in the basic part. These are especially useful to look at if you are doing the extra assignments and getting stuck.
+
+## My code is not working - what's wrong?
+You have most likely already run into a situation where your code is not working or you get some exception when trying to run it. If you have not yet, you will. Everyone does! What to do?
+
+One place to look is the browser's *developer tools console* that you should already be familiar with. If there is an error there (in red text), read it and try to understand where it is pointing to. If you can't figure it out, take a step back (undo your last changes) and check that the code was working before the last change. That way you can at least narrow down the cause to one change.
+
+Another place to look at is Visual Studio Code. If there is something wrong with the syntax of the code, Visual Studio Code will indicate it to you by *underlining the problematic part with red*. Like this:
+![Visual Studio Code red underline](./pics/VSC_red.png)
+
+When you see a red underline, hover your mouse over the underlined part. Visual Studio Code will offer you a hint on how to fix the problem:
+![Visual Studio Code hint](./pics/VSC_help.png)
+
+That's handy! You should definitely take advantage of these built-in checks.
+
+## Debugging
+*Debugging* means using tools to more easily find mistakes (bugs) in the code. Using a debugger also enables you to see more clearly how the code is actually working (you can see it run step by step, line by line). You can stop the execution on some line of the code and observe the state of the system at that point, for example look at what the values of variables are at that point. If you are interested in learning about using the debugger tools in Chrome, you could try this short tutorial: [https://javascript.info/debugging-chrome](https://javascript.info/debugging-chrome){:target="_blank"}.
+
+## Working with Javascript objects and arrays
+If you are interested in understanding more closely how the helper functions , you should take some time to study Javascript objects and arrays. This is definitely something you would need to learn more if you want to continue working with APIs (and otherwise with Javascript also). The mentioned helper functions work by selecting certain parts of Javascript Objects and transforming them using built-in Javascript functions like sort and map. 
+
+Here are some Mozilla resources to look into if you are interested in learning more about these things:
+
+Short *Javascript basics* tutorial, which will introduce the language basics:
+[https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics){:target="_blank"}
+
+Some relevant parts for working with objects:
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types){:target="_blank"}
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects){:target="_blank"}
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections){:target="_blank"}
+
+A comprehensive Javascript guide (the previous three links are parts of this guide):
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){:target="_blank"}
+
 # What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/){:target="_blank"} are an excellent choice. Mooc.fi offers courses in English and Finnish.
 
