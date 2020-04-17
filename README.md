@@ -593,7 +593,7 @@ That's handy! You should definitely take advantage of these built-in checks.
 *Debugging* means using tools to more easily find mistakes (bugs) in the code. Using a debugger also enables you to see more clearly how the code is actually working (you can see it run step by step, line by line). You can stop the execution on some line of the code and observe the state of the system at that point, for example look at what the values of variables are at that point. If you are interested in learning about using the debugger tools in Chrome, you could try this short tutorial: [https://javascript.info/debugging-chrome](https://javascript.info/debugging-chrome){:target="_blank"}.
 
 ## Working with Javascript objects and arrays
-If you are interested in understanding more closely how the helper functions , you should take some time to study Javascript objects and arrays. This is definitely something you would need to learn more if you want to continue working with APIs (and otherwise with Javascript also). The mentioned helper functions work by selecting certain parts of Javascript Objects and transforming them using built-in Javascript functions like sort and map. 
+If you are interested in understanding more closely how the helper functions work, you should take some time to study Javascript objects and arrays. This is definitely something you would need to learn more if you want to continue working with APIs (and otherwise with Javascript also). The mentioned helper functions work by selecting certain parts of Javascript Objects and transforming them using built-in Javascript functions like sort and map. 
 
 Here are some Mozilla resources to look into if you are interested in learning more about these things:
 
