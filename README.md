@@ -603,15 +603,19 @@ function getValues(data) {
 ```
 
 The first observation is that it takes an object (called `data`) as a parameter. This object is the response we get from the World Bank API. So for Finland (FIN), the beginning of the data object looks like this:
+
 ![Data for Finland](./pics/data_finland.png)
 
 This object is what the function processes. The object is an array (you can see this because it starts with a `[`). An array just means that it is a list of several objects or values. The first thing getValues does is selecting only the `second` item in the array: `data[1]`. The number `1` is the index, but since Javascript uses 0-based indexing (the first item of a list is always index 0, second item is index 1, third item is index 2...), it selects the second item. The second item starts from line 10 (in the picture) and is another array. It contains many objects, one for each year. The first object in the array (`data[1][0]`) looks like this:
+
 ![Data for Finland](./pics/data_finland_object2019.png)
 
 The next thing the function does is selecting *sorting* the array containing the objects for different years. It is sorting them so that the smallest date comes first (by date in ascending order). The sort function is given a function to sort the objects by. This function uses the new *arrow function notation*: `(a, b) => a.date - b.date`. The sort function compares pairs of objects and puts the ones with the smallest dates first in the array. So the code so far is `data[1].sort((a, b) => a.date - b.date)`. The sorted array now starts like this:
+
 ![Sorted array for Finland](./pics/data_finland_sortedbydate.png)
 
 The last thing the function does is *mapping* each member of the array. Mapping means applying a transformation into each member. The transformation here is simply selecting only the property *value* for each object. The syntax is similar to that of sort: you have to give *map* a function to apply to each member of the array. The function is `item => item.value`. After this transformation we have the final array, which only contains values (like *5515525* for the year 2018) sorted so that they start from the value for the smallest year in the time series. So the final array starts like:
+
 ![Sorted values for Finland](./pics/data_finland_sortedvalues.png)
 
 If you have read this far, you may appreciate why the internal workings of these functions were not explained in detail in the basic part of the course. ;) If you want to learn more about these built-in functions like sort and map, check out the material under the next heading.
