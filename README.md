@@ -72,7 +72,7 @@ You should see a screen like this:
 
 ![World Bank JSON data](./pics/api_finland.png)
 
-It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5 518 050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON){:target="_blank"}*). 
+It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5 515 525. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON){:target="_blank"}*). 
 
 <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUMVFNMUlLNzdLSkdaUlVZMlNTMURXTFlKRy4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
@@ -591,6 +591,30 @@ That's handy! You should definitely take advantage of these built-in checks.
 
 ## Debugging
 *Debugging* means using tools to more easily find mistakes (bugs) in the code. Using a debugger also enables you to see more clearly how the code is actually working (you can see it run step by step, line by line). You can stop the execution on some line of the code and observe the state of the system at that point, for example look at what the values of variables are at that point. If you are interested in learning about using the debugger tools in Chrome, you could try this short tutorial: [https://javascript.info/debugging-chrome](https://javascript.info/debugging-chrome){:target="_blank"}.
+
+## How do the helper functions actually work?
+The helper functions (e.g. `function getValues(data)` and `function getCountryName(data)`) were not covered in detail in the basic part. Here is a detailed explanation of the getValues function. Based on this explanation, you should be able to also understand the other helper functions, as they do very similar things.
+
+So how does the getValues function work? Here it is once more:
+```
+function getValues(data) {
+    var vals = data[1].sort((a, b) => a.date - b.date).map(item => item.value);
+    return vals;
+```
+
+The first observation is that it takes an object (called `data`) as a parameter. This object is the response we get from the World Bank API. So for Finland (FIN), the beginning of the data object looks like this:
+![Data for Finland](./pics/data_finland.png)
+
+This object is what the function processes. The object is an array (you can see this because it starts with a `[`). An array just means that it is a list of several objects or values. The first thing getValues does is selecting only the `second` item in the array: `data[1]`. The number `1` is the index, but since Javascript uses 0-based indexing (the first item of a list is always index 0, second item is index 1, third item is index 2...), it selects the second item. The second item starts from line 10 (in the picture) and is another array. It contains many objects, one for each year. The first object in the array (`data[1][0]`) looks like this:
+![Data for Finland](./pics/data_finland_object2019.png)
+
+The next thing the function does is selecting *sorting* the array containing the objects for different years. It is sorting them so that the smallest date comes first (by date in ascending order). The sort function is given a function to sort the objects by. This function uses the new *arrow function notation*: `(a, b) => a.date - b.date`. The sort function compares pairs of objects and puts the ones with the smallest dates first in the array. So the code so far is `data[1].sort((a, b) => a.date - b.date)`. The sorted array now starts like this:
+![Sorted array for Finland](./pics/data_finland_sortedbydate.png)
+
+The last thing the function does is *mapping* each member of the array. Mapping means applying a transformation into each member. The transformation here is simply selecting only the property *value* for each object. The syntax is similar to that of sort: you have to give *map* a function to apply to each member of the array. The function is `item => item.value`. After this transformation we have the final array, which only contains values (like *5515525* for the year 2018) sorted so that they start from the value for the smallest year in the time series. So the final array starts like:
+![Sorted values for Finland](./pics/data_finland_sortedvalues.png)
+
+If you have read this far, you may appreciate why the internal workings of these functions were not explained in detail in the basic part of the course. ;) If you want to learn more about these built-in functions like sort and map, check out the material under the next heading.
 
 ## Working with Javascript objects and arrays
 If you are interested in understanding more closely how the helper functions work, you should take some time to study Javascript objects and arrays. This is definitely something you would need to learn more if you want to continue working with APIs (and otherwise with Javascript also). The mentioned helper functions work by selecting certain parts of Javascript Objects and transforming them using built-in Javascript functions like sort and map. 
