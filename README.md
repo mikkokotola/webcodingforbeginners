@@ -610,7 +610,7 @@ This object is what the function processes. The object is an array (you can see 
 
 ![Data for Finland](./pics/data_finland_object2019.png)
 
-The next thing the function does is selecting *sorting* the array containing the objects for different years. It is sorting them so that the smallest date comes first (by date in ascending order). The sort function is given a function to sort the objects by. This function uses the new *arrow function notation*: `(a, b) => a.date - b.date`. The sort function compares pairs of objects and puts the ones with the smallest dates first in the array. So the code so far is `data[1].sort((a, b) => a.date - b.date)`. The sorted array now starts like this:
+The next thing the function does is *sorting* the array containing the objects for different years. It is sorting them so that the smallest date comes first (by date in ascending order). The sort function is given a function to sort the objects by. This function uses the new *arrow function notation*: `(a, b) => a.date - b.date`. The sort function compares pairs of objects and puts the ones with the smallest dates first in the array. So the code so far is `data[1].sort((a, b) => a.date - b.date)`. The sorted array now starts like this:
 
 ![Sorted array for Finland](./pics/data_finland_sortedbydate.png)
 
@@ -626,15 +626,15 @@ If you are interested in understanding more closely how the helper functions wor
 Here are some Mozilla resources to look into if you are interested in learning more about these things:
 
 Short *Javascript basics* tutorial, which will introduce the language basics:
-[https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics){:target="_blank"}
 
 Some relevant parts for working with objects:
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types){:target="_blank"}
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects){:target="_blank"}
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections){:target="_blank"}
 
 A comprehensive Javascript guide (the previous three links are parts of this guide):
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){:target="_blank"}
 
 # What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/){:target="_blank"} are an excellent choice. Mooc.fi offers courses in English and Finnish.
