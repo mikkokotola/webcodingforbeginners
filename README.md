@@ -531,7 +531,7 @@ options: {
 }
 ```
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. [Mozilla color picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool){:target="_blank"}
-- **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html){:target="_blank"}.
+- **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html){:target="_blank"}. If you want to do even more, check out the section <a href="#ideas-for-styling-the-app">*Ideas for styling the app*</a>.
 - **Get data for 60 years instead of 50.** As you have noticed the World Bank API is returning us data for the year range 1970-2019. Exactly 50 years. Why exactly 50 years? This has a direct connection to the first part of the response, which looks like this: `{"page":1,"pages":2,"per_page":50,"total":60,"sourceid":"2","lastupdated":"2020-02-27"}`. World Bank is offering the data separated into several pages. The metadata also tells us that there actually is 60 years worth of data available. Look at the [documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures){:target="_blank"} and change your code so that is requests 60 items per page instead of the default 50. After the change, you should see a population graph for 60 years instead of 50. Hint: try the request with your browser first to get it to work, and then move to editing the code.
 - **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. For Corona and health related indicators see the "Relevant indicators" list at the bottom of the [World Bank Corona virus topic page](http://datatopics.worldbank.org/universal-health-coverage/coronavirus/){:target="_blank"} (you can click the API link next to each indicator).
 - **Create a footer and nice styles for it.** Create a footer for your page and some nice CSS style for it. Look at the instructions and example  [https://www.w3docs.com/learn-html/html-footer-tag.html](https://www.w3docs.com/learn-html/html-footer-tag.html){:target="_blank"}. In the footer, show your own name as the author. Also mention "Based on the Population graphs app (MIT)" and link the license (MIT) to the [license text](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"} and mention "Population data: World Bank (CC-BY-4.0)" and link the CC-BY-4.0 to the [license text](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}. Mentioning open source licenses is good practice (read more about licenses in the "Contributing" section below).
@@ -593,6 +593,18 @@ That's handy! You should definitely take advantage of these built-in checks.
 
 ## Debugging
 *Debugging* means using tools to more easily find mistakes (bugs) in the code. Using a debugger also enables you to see more clearly how the code is actually working (you can see it run step by step, line by line). You can stop the execution on some line of the code and observe the state of the system at that point, for example look at what the values of variables are at that point. If you are interested in learning about using the debugger tools in Chrome, you could try this short tutorial: [https://javascript.info/debugging-chrome](https://javascript.info/debugging-chrome){:target="_blank"}.
+
+## Ideas for styling the app
+- Edit fonts by using Google Fonts (a font is linked to your html-file the same way as bootstrap).
+- Add an image to your page. You can also style the image with css.
+- Add background-image for example to the footer. (Find you more by googling "seamless background images".)
+- Style your button and link. Add also hover-style.
+- Style the input-box.
+- Style the colors of the chart. Use gradient (google "chart js gradient").
+
+![Styling example 1](./pics/styling1.png)
+
+![Styling example 2](./pics/styling2.png)
 
 ## How do the helper functions actually work?
 The helper functions (e.g. `function getValues(data)` and `function getCountryName(data)`) were not covered in detail in the basic part. Here is a detailed explanation of the getValues function. Based on this explanation, you should be able to also understand the other helper functions, as they do very similar things.
@@ -669,7 +681,7 @@ Thanks to
 ![Sympa bull and unicorn](./pics/sympa_bull&unicorn.jpg)
 
 # Technical
-Author: Mikko Kotola 2020  
+Authors: Mikko Kotola and Helena Juvankoski 2020  
 License for material except illustrations: <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)  
 License for code contained in the material: [MIT](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"}  
 Illustrations: (c) Sympa  
