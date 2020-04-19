@@ -6,39 +6,22 @@
 * Table of contents will be inserted here when this markdown is built by Jekyll
 {:toc}
 
-Welcome to the amazing world of web coding! On this MOOC by Sympa we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
+Welcome to the amazing world of web coding! On this **#mimmitkoodaa MOOC by Sympa** we will build a simple web app that can visualize population graphs for different countries. Let's look over some general information about the course first.
 
 # Technical stuff about the course
 ## Time requirement for the course
 Our estimate is that you should be to complete the pre-work part in 3-8 hours and to build the population basic graphs app in about 3-8 hours. After that there are several options for extra assigments to improve your own version of the app. This assumes no previous programming experience, but does assume that you are comfortable using a computer and a browser.
 
-## Completing the course and feedback
-If you wish to complete the course, follow the instructions for submitting your files at the end of the material. All finishers will get a diploma. If you want to do the course just for learning, you can follow the material, do the quizzes and give feedback but skip submitting your files.
+## Completing the course
+If you wish to complete the course, follow the instructions for submitting your files at the end of the material. All finishers will get a course certificate. If you want to do the course just for learning, you can follow the material, do the quizzes and give feedback but skip submitting your files.
 
 The quizzes in the material are meant to support your learning. The results are collected only anonymously. Completing the quizzes is not required for completing the course.
 
-The feedback for the course is collected anonymously. Giving feedback is optional.
+## Data privacy
 
-The quizzes and the feedback are implemented using Microsoft Forms and the anonymous data is saved by Sympa.
+The quiz answers and feedback for the course are collected anonymously. Filling in quizzes and giving feedback is optional. The quizzes and the feedback are implemented using Microsoft Forms.
 
-## Beta testers
-Thank you for volunteering to take part in the beta test! The deadline for completing the course in the beta phase is **Monday 13.4.2020**. If possible, we hope you can do it already before that, so we can fully utilize your feedback to improve the course before the release.
-
-NOTE: there were 5 embedded quizzed added to the material 14.3. Those are only properly embedded when using the material at the address [https://sympaoy.github.io/webcodingforbeginners/](https://sympaoy.github.io/webcodingforbeginners/), so please use the material at that address (which is different from the one originally given to beta participants). Otherwise the content is identical at [https://github.com/SympaOy/webcodingforbeginners](https://github.com/SympaOy/webcodingforbeginners). The material will very likely update somewhat during the beta, but the main structure and content will not change.
-
-Support from peers (other participants) and from organizers is offered on Slack (you will get the link separately). Slack is the main forum for questions, discussion, ideas and feedback. Please keep in mind that we as organizers are doing this mainly voluntarily and can offer support only within our limits. For the actual implementation, peer support will be the main form of support.
-
-We are especially interested in your feedback on:
-- The amount of time you spend on the pre-work (this will likely vary quite a bit depending on your background)
-- The amount of time you spend on setting up tools
-- The amount of time you spend on the main part (building the Population graphs app)
-- Which parts are hard to follow and need clarification or better instructions
-- Which parts work well
-- Ways to improve the small assignments (intertwined in the material)
-- What bonus assignments look interesting
-- What bonus assignments could be added 
-
-There is a feedback questionnaire at the end, but you can also post feedback on a more daily basis on Slack. All feedback is highly appreciated!
+The course submission form and willingness to demo form include personal data (name, e-mail). [Privacy policy](./privacy_policy.md) is available.
 
 ## Prerequisites
 You will need to have Visual Studio Code installed on your computer. If you have not installed it, please do so now at [https://code.visualstudio.com/](https://code.visualstudio.com/){:target="_blank"}. Select the *Download for Windows* if you have a Windows computer. Or your own operating system. Install it with default setup. 
@@ -89,7 +72,7 @@ You should see a screen like this:
 
 ![World Bank JSON data](./pics/api_finland.png)
 
-It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5 518 050. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON){:target="_blank"}*). 
+It looks... well... it looks like a lot of data. But let's take a closer look. We've circled a couple of points of interest in the picture. First, the data says *Finland*, so it looks like we indeed got back some data about Finland. The Finland marking in fact runs all the way down the page. Second, there's a list of what looks like year numbers running down the page. And third, next to the year numbers, there's values. For the circled year (2018), the value is 5 515 525. A bit over 5,5 million. Yes, that looks like the population of Finland. And these values seem to be associated with the years. So we can be pretty confident that we got what we asked for, a population time series of Finland. Just in a bit clunky format. The format is actually called **JSON** (JavaScript Object Notation), and this format is very widely used in transmitting data. If you want to read a bit more about JSON, you can read the first part of a Mozilla tutorial (*[No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON){:target="_blank"}*). 
 
 <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUMVFNMUlLNzdLSkdaUlVZMlNTMURXTFlKRy4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; width:100%; height:800px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
@@ -100,7 +83,7 @@ Now of course the API does not offer data on only Finland and only the total pop
 ## Basic view with titles
 OK, so we know that we have access to the data we need for our app. Let's get started with building it. 
 
-We'll start with a minimal HTML file. Download the file at [https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html](https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html)
+We'll start with a minimal HTML file. Download the [minimal HTML file](https://raw.githubusercontent.com/mikkokotola/populationgraphs/5ba3debb035a834d2695b2f0c4feb2c53cbc521d/public/index.html) from GitHub.
 
 If you open the file in Chrome, it will most likely open in your browser as a page. You can save the file to your own computer by pressing `Ctrl + S`. Create a folder in a suitable location on your computer. Name your folder e.g. *PopulationGraphs* and save the file *index.html* inside that folder.
 
@@ -334,7 +317,7 @@ We will need two additions to *index.html*. First, add the following code the he
 
 This code will load the code for Chart.js into the browser from their hosting site. So we're loading the tool needed for creating the visualization. Notice that this line is very similar to loading our own script.
 
-Second, we need to add an HTML element where we can render the population graph. Graph.js requires a *canvas* element that can be used for drawing 2-dimensional graphics and animations. Add it by inserting this line at the end of the body:
+Second, we need to add an HTML element where we can render the population graph. Chart.js requires a *canvas* element that can be used for drawing 2-dimensional graphics and animations. Add it by inserting this line at the end of the body:
 ```
     <canvas id='myChart'></canvas>
 ```
@@ -357,9 +340,11 @@ function getCountryName(data) {
 }
 ```
 
-These helper functions will extract the actual population counts, the year labels and the country name from the data array that we got from the World Bank (and that we printed in the console). In essence, each method takes the whole data array, selects only the main time series list (not the metadata) for processing, sorts it by year and selects only the wanted piece of data from each year. Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet.
+These helper functions will extract the actual population counts, the year labels and the country name from the data array that we got from the World Bank (and that we printed in the console). In essence, each method takes the whole data array, selects only the main time series list (not the metadata) for processing, sorts it by year and selects only the wanted piece of data from each year. Remember how it had a lot of extra data that we won't need for the population graph. These methods will provide us with just the data we need. They are not being called yet, so they won't do anything yet. 
 
-Then we'll see how our new tool works. Let's add this function that will render the actual population graph using the population data, the year labels and the country name:
+If you are interested in studying how the helper functions work internally, you can read a more detailed technical description in the section <a href="#how-do-the-helper-functions-actually-work">*How do the helper functions actually work?*</a> (but this is a bit advanced and definitely not required, so if you're a beginner, maybe continue reading this part for now and maybe return to the detailed explanation later once you are doing extra assigments).
+
+Now let's proceed to see how our new tool works. Let's add this function that will render the actual population graph using the population data, the year labels and the country name:
 ```
 function renderChart(data, labels, countryName) {
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -417,7 +402,11 @@ If you still have time, there are still several things we can do to improve the 
 
 ## Clean-up
 
-Time to do some clean-up. We are no longer using the function logCountryCode so remove it from the js file. Remove also the comment before the event listener line. So the first line of the file will be ` document.getElementById('renderBtn').addEventListener('click', fetchData);` after the clean-up.
+Time to do some clean-up. We are no longer using the function logCountryCode so remove it from the js file. Remove also the comment before the event listener line. So the first line of the file will be 
+```
+document.getElementById('renderBtn').addEventListener('click', fetchData);
+```
+after the clean-up.
 
 Cleaning up dead code is important. If you don't, your files will become cluttered with unused code and it will be hard to figure out what is actually being used and what is not. Keep it clean.
 
@@ -508,18 +497,23 @@ That's it for the basic part of this course! Hopefully you have enjoyed the jour
 
 # Feedback and submission
 ## Feedback
-We would love to get some feedback from you. Regardless of whether you have worked on this material in an instructed workshop or by yourself as a MOOC. Feedback helps us recognize what is working and which parts we should still improve for the future.
+We would love to get some feedback from you. Feedback helps us recognize what is working and which parts we should still improve for the future.
 
-Give feedback using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
+Give feedback now about the main part (up to part wrap-up) using the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UMU40VlcxNjNYOFVMUkxVVzlMWUtQQ0NQVSQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
 
 ## Submit your files
 Make sure you have the three files (index.html, styles.css and myChart.js) named exactly as instructed.
 
-Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNlhLVURVOTY2UUZEV0VKTDhDRVZVWkVKWCQlQCN0PWcu){:target="_blank"} to submit your files. After filling in the form, you will be displayed a link for submitting the files. 
+Fill in the [submit your files form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPYuD9NDNst9Fg6lleCfSi2hUOVU3QzhIU0c0UzlJTTg3Qk5GTk1GSEhDNi4u){:target="_blank"} to submit your files. After filling in the form, you will be displayed a link for submitting the files. 
 
 After submitting, you will get an e-mail. If your submission passes the automated tests, your course certificate will be attached. If your submission does not pass all tests yet, you will get feedback on which tests are not passing, so you can fix your files and try submitting again.
 
 ![Sympa wings!](./pics/sympa_siivet.jpg)
+
+## Willingness to demo
+If you have done some extra assignments after the initial submission and you would be willing to demo your version of the Population graphs app, please fill in your info here! We will select a few participants for demoing from those who have indicated their willingness. The online demo & interview session right after the course on 21.4.2020 at 17.00-17.45 (Finnish time). Everyone is welcome to join the session!
+
+Fill in the [willingness to demo form](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UNDYxSjhUMTlQVFAwMUw5NEcyV0c0RklPUiQlQCN0PWcu) at the latest at 19.4.2020 23.59.
 
 # Extra assignments
 If you are still eager to learn more and improve you app, here are some assignments to improve the app. However, before continuing, submit your files in their current state as you will be altering them during the extra assignments and they may no longer pass the automated checks after the alterations. 
@@ -537,22 +531,136 @@ options: {
 }
 ```
 - **Customize the look of the graph** by adjusting the Chart.js parameters. For colours, see e.g. [Mozilla color picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool){:target="_blank"}
-- **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html){:target="_blank"}.
+- **Customize the look of the page** by altering the CSS. Try e.g. changing the font or font size or padding of elements. Or substitute the Bootstrap for another style sheet like [Materialize](https://materializecss.com/getting-started.html){:target="_blank"}. If you want to do even more, check out the section <a href="#ideas-for-styling-the-app">*Ideas for styling the app*</a>.
 - **Get data for 60 years instead of 50.** As you have noticed the World Bank API is returning us data for the year range 1970-2019. Exactly 50 years. Why exactly 50 years? This has a direct connection to the first part of the response, which looks like this: `{"page":1,"pages":2,"per_page":50,"total":60,"sourceid":"2","lastupdated":"2020-02-27"}`. World Bank is offering the data separated into several pages. The metadata also tells us that there actually is 60 years worth of data available. Look at the [documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures){:target="_blank"} and change your code so that is requests 60 items per page instead of the default 50. After the change, you should see a population graph for 60 years instead of 50. Hint: try the request with your browser first to get it to work, and then move to editing the code.
-- **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. 
+- **Change the indicator that the app fetches.** So instead of the country's total population, fetch e.g. SP.POP.65UP.FE.IN or SP.DYN.LE00.MA.IN. The different age segments for the SP.POP are 0014 (0-14), 1564 (15-64) and 65UP (65-). The gender codes are FE (female) and MA (male). You can also google the World Bank API and try look for other interesting indicators that are offered as time series. For Corona and health related indicators see the "Relevant indicators" list at the bottom of the [World Bank Corona virus topic page](http://datatopics.worldbank.org/universal-health-coverage/coronavirus/){:target="_blank"} (you can click the API link next to each indicator).
+- **Create a footer and nice styles for it.** Create a footer for your page and some nice CSS style for it. Look at the instructions and example  [https://www.w3docs.com/learn-html/html-footer-tag.html](https://www.w3docs.com/learn-html/html-footer-tag.html){:target="_blank"}. In the footer, show your own name as the author. Also mention "Based on the Population graphs app (MIT)" and link the license (MIT) to the [license text](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"} and mention "Population data: World Bank (CC-BY-4.0)" and link the CC-BY-4.0 to the [license text](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}. Mentioning open source licenses is good practice (read more about licenses in the "Contributing" section below).
 
 ## Medium-size assignments
 - **Show country name and indicator name.** Our app is currently showing the country name only as a label within the graph. Add separate text paragraphs that display the country name and the indicator name. We are already extracting the country name from the fetchedData in the function getCountryName(data). Use that as an example and figure out how to extract the indicator name in a similar function getIndicatorName(data).
 - **Fetch information about the capital city and area of the country, and the image of the country flag** from [RESTCountries API](https://restcountries.eu/#api-endpoints-code){:target="_blank"} and display those along with the population graph. You will need to create new HTML elements and make a similar API request to RestCountries as you did to the World Bank API. For a point of comparison, you can look at the master branch of the [Population graphs repository](https://github.com/mikkokotola/populationgraphs){:target="_blank"}.
 - **Error handling.** Our app does not currently really have error handling. Implement error handling for cases when the user inputs an incorrect country code or when fetching the data fails (due to e.g. unavailable internet connection). You should probably use a try-catch block and add HTML elements for displaying errors. Again, for point of comparison look at the master branch of the repo.
+- **Use Corona data offered by THL & HS.** Our frontend in not limited to visualizing World Bank time series data. Change your frontend to visualize Corona infection data in Finland offered by Helsingin Sanomat (HS) based on official data by Terveyden ja hyvinvoinnin laitos (THL). The data is available at the address [https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData](https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData){:target="_blank"}. You will need the following changes to the basic version of the app:
+    * remove the restriction of 3 characters for the country code so the user can input as many letters as she wants
+    * change the url within fetchData to the URL above (the Corona data URL)
+    * use the three functions presented below to extract the correct data from the response (instead of the old ones)
+    * rename the variable that you are storing the user input from countryCode to areaCode (to better reflect what it is)
+    * call the three new helper functions instead of the old ones (so `var data = getValuesCorona(fetchedData, areaCode);` instead of `var data = getValues(fetchedData);`). Remember that the new functions now have 2 parameters, so all calls will need to have `fetchedData` and `areaCode`.
+    * Update the call to renderChart to use the new areaName instead of countryName.
+    * Test by entering health care distict names like "HUS", "Lappi" and "Pirkanmaa". To show data for the whole country, enter "Kaikki sairaanhoitopiirit".
+    * Change the label of the chart from "Population, " to "Confirmed infections, "
+    * You can read more about how HS uses the data at [https://github.com/HS-Datadesk/koronavirus-avoindata](https://github.com/HS-Datadesk/koronavirus-avoindata){:target="_blank"}
+
+```
+function getValuesCorona(data, areaCode) {
+    var vals = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.value);
+    return vals;
+}
+
+function getLabelsCorona(data, areaCode) {
+    var labels = data.confirmed[areaCode].sort((a, b) => a.date - b.date).map(item => item.date.substring(0,10));
+    return labels;
+}
+
+function getAreaName(data, areaCode) {
+    var areaName = data.confirmed[areaCode][0].healthCareDistrict;
+    return areaName;
+}
+```
 
 ## Large assignments
 - Implement way for the user to **select the country using a drop-down menu** instead of typing in a country code. You can fetch the list of countries from a World Bank API at address [https://api.worldbank.org/v2/country?format=json&per_page=400](https://api.worldbank.org/v2/country?format=json&per_page=400){:target="_blank"}. For comparison, look at the branch [dropdowncountryselection](https://github.com/mikkokotola/populationgraphs/tree/dropdowncountryselection){:target="_blank"} of the repository.
 - Implement functionality to select the age segment to display (see the age segments under Small assignments).
 
+## Feedback for the extras
+Give feedback about the extra assignments using the [feedback form for extras](https://forms.office.com/Pages/ResponsePage.aspx?id=qBDdu9lHMkWtPpjJdV-yPexVQAMN-VxKqazZ40sdgU9UQkNKRDdZT1JKV0lORjQ2NFlNSkJEN1BZNCQlQCN0PWcu){:target="_blank"}. It will take you about 3-5 minutes. 
+
+# Additional tools and topics
+Here are a few tools and topics that were not covered in the basic part. These are especially useful to look at if you are doing the extra assignments and getting stuck.
+
+## My code is not working - what's wrong?
+You have most likely already run into a situation where your code is not working or you get some exception when trying to run it. If you have not yet, you will. Everyone does! What to do?
+
+One place to look is the browser's *developer tools console* that you should already be familiar with. If there is an error there (in red text), read it and try to understand where it is pointing to. If you can't figure it out, take a step back (undo your last changes) and check that the code was working before the last change. That way you can at least narrow down the cause to one change.
+
+Another place to look at is Visual Studio Code. If there is something wrong with the syntax of the code, Visual Studio Code will indicate it to you by *underlining the problematic part with red*. Like this:
+![Visual Studio Code red underline](./pics/VSC_red.png)
+
+When you see a red underline, hover your mouse over the underlined part. Visual Studio Code will offer you a hint on how to fix the problem:
+![Visual Studio Code hint](./pics/VSC_help.png)
+
+That's handy! You should definitely take advantage of these built-in checks.
+
+## Debugging
+*Debugging* means using tools to more easily find mistakes (bugs) in the code. Using a debugger also enables you to see more clearly how the code is actually working (you can see it run step by step, line by line). You can stop the execution on some line of the code and observe the state of the system at that point, for example look at what the values of variables are at that point. If you are interested in learning about using the debugger tools in Chrome, you could try this short tutorial: [https://javascript.info/debugging-chrome](https://javascript.info/debugging-chrome){:target="_blank"}.
+
+## Ideas for styling the app
+- Edit fonts by using Google Fonts (a font is linked to your html-file the same way as bootstrap).
+- Add an image to your page. You can also style the image with css.
+- Add background-image for example to the footer. (Find you more by googling "seamless background images".)
+- Style your button and link. Add also hover-style.
+- Style the input-box.
+- Style the colors of the chart. Use gradient (google "chart js gradient").
+
+![Styling example 1](./pics/styling1.png)
+
+![Styling example 2](./pics/styling2.png)
+
+## How do the helper functions actually work?
+The helper functions (e.g. `function getValues(data)` and `function getCountryName(data)`) were not covered in detail in the basic part. Here is a detailed explanation of the getValues function. Based on this explanation, you should be able to also understand the other helper functions, as they do very similar things.
+
+So how does the getValues function work? Here it is once more:
+```
+function getValues(data) {
+    var vals = data[1].sort((a, b) => a.date - b.date).map(item => item.value);
+    return vals;
+```
+
+The first observation is that it takes an object (called `data`) as a parameter. This object is the response we get from the World Bank API. So for Finland (FIN), the beginning of the data object looks like this:
+
+![Data for Finland](./pics/data_finland.png)
+
+This object is what the function processes. The object is an array (you can see this because it starts with a `[`). An array just means that it is a list of several objects or values. The first thing getValues does is selecting only the `second` item in the array: `data[1]`. The number `1` is the index, but since Javascript uses 0-based indexing (the first item of a list is always index 0, second item is index 1, third item is index 2...), it selects the second item. The second item starts from line 10 (in the picture) and is another array. It contains many objects, one for each year. The first object in the array (`data[1][0]`) looks like this:
+
+![Data for Finland](./pics/data_finland_object2019.png)
+
+The next thing the function does is *sorting* the array containing the objects for different years. It is sorting them so that the smallest date comes first (by date in ascending order). The sort function is given a function to sort the objects by. This function uses the new *arrow function notation*: `(a, b) => a.date - b.date`. The sort function compares pairs of objects and puts the ones with the smallest dates first in the array. So the code so far is `data[1].sort((a, b) => a.date - b.date)`. The sorted array now starts like this:
+
+![Sorted array for Finland](./pics/data_finland_sortedbydate.png)
+
+The last thing the function does is *mapping* each member of the array. Mapping means applying a transformation into each member. The transformation here is simply selecting only the property *value* for each object. The syntax is similar to that of sort: you have to give *map* a function to apply to each member of the array. The function is `item => item.value`. After this transformation we have the final array, which only contains values (like *5515525* for the year 2018) sorted so that they start from the value for the smallest year in the time series. So the final array starts like:
+
+![Sorted values for Finland](./pics/data_finland_sortedvalues.png)
+
+If you have read this far, you may appreciate why the internal workings of these functions were not explained in detail in the basic part of the course. ;) If you want to learn more about these built-in functions like sort and map, check out the material under the next heading.
+
+## Working with Javascript objects and arrays
+If you are interested in understanding more closely how the helper functions work, you should take some time to study Javascript objects and arrays. This is definitely something you would need to learn more if you want to continue working with APIs (and otherwise with Javascript also). The mentioned helper functions work by selecting certain parts of Javascript Objects and transforming them using built-in Javascript functions like sort and map. 
+
+Here are some Mozilla resources to look into if you are interested in learning more about these things:
+
+Short *Javascript basics* tutorial, which will introduce the language basics:
+* [https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics){:target="_blank"}
+
+Some relevant parts for working with objects:
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections){:target="_blank"}
+
+A comprehensive Javascript guide (the previous three links are parts of this guide):
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){:target="_blank"}
+
 # What next?
 If you want to continue learning coding, the MOOCs offered by the University of Helsinki's Department of Computer Science at [mooc.fi](https://www.mooc.fi/){:target="_blank"} are an excellent choice. Mooc.fi offers courses in English and Finnish.
 
+# What is Sympa?
+The Sympa HR solution was designed to improve the lives of HR across the world. Providing companies an aggregated, clear view on all people data and unlimited integrations to other softwares, it supports smart decision-making and helps automate routine tasks. Backed up with great customer support, it's currently used by more than 700 organisations - and has one of the highest customer satisfaction rates in HR technology in Europe. [Sympa](https://www.sympa.com/){:target="_blank"} employs 120 people internationally, with offices in Finland, Sweden, Denmark, Norway and the Netherlands.
+
+Read the [interview of Irene Koskinen](https://www.sympa.com/fi/blogi/koodaava-ex-katilo-irene-koskinen-kannustaa-mimmeja-tekniikan-pariin/){:target="_blank"}, a sympatico (in Finnish).
+
+Check out the [careers](https://www.sympa.com/about/careers/){:target="_blank"} opportunities.
+
+![Sympa logo](./pics/sympa_logo.png)
 
 # Contributing
 This course material is licenced under the <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> and the Population graph app is licenced under the [MIT license](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"}. This means that both the material and the app are open source. You can contribute, modify, build upon and use the material (except for the Sympa illustrations) as long as you give appropriate credit to the original authors, provide a link to the license, and indicate if changes were made.
@@ -564,7 +672,7 @@ So if you have ideas on improving the material (fixing mistakes, explaining some
 
 # Thanks
 Thanks to 
-- *#mimmitkoodaa* for amazing work in diversifying the coder tribe in Finland
+- *[#mimmitkoodaa](https://mimmitkoodaa.ohjelmistoebusiness.fi/)* for amazing work in diversifying the coder tribe in Finland
 - *Sympa* for participating in #mimmitkoodaa and making possible this course
 - *World Bank* for the data
 - *Mozilla* for the tutorials
@@ -573,10 +681,9 @@ Thanks to
 ![Sympa bull and unicorn](./pics/sympa_bull&unicorn.jpg)
 
 # Technical
-Author: Mikko Kotola 2020  
-License for material except illustrations: CC-BY-4.0 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)  
-License for code contained in the material: MIT  
+Authors: Mikko Kotola and Helena Juvankoski 2020  
+License for material except illustrations: <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> (CC-BY-4.0)  
+License for code contained in the material: [MIT](https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE){:target="_blank"}  
 Illustrations: (c) Sympa  
-Prepared for #mimmitkoodaa beginner workshop by Sympa  
 Made using markdown  
-World Bank data license: CC-BY-4.0  
+World Bank data license: [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/){:target="_blank"}
